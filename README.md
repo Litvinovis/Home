@@ -1,8 +1,6 @@
 # <p align=center> "Pool" School 21 </p>
 
- ![alt text](https://sun9-17.userapi.com/yKuFaMBIif10IaLFAMWzt0BlVLJD0YZ1nOe7AQ/ma-oGNJwqRc.jpg)
-
-Скрипт для программы (Clickermann)[http://crapware.aidf.org/page/clickermann] v4.13. Создан для автоматизации процесса управления социальными сетями.
+Скрипт для программы [Clickermann](http://crapware.aidf.org/page/clickermann) v4.13. Создан для автоматизации процесса управления социальными сетями.
 Данный скрипт берет 5 новостей подготовленных в файле Excel и публикует их в:
 - 1 группа Вконтакте;
 - 5 персональных страниц Вконтакте;
