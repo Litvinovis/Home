@@ -1,25 +1,23 @@
 ﻿DEFINE($var, 0)
 DEFINE($var2, 0)
 
-// goto(temp)
-
 LCLICK(532,282)
 WAITMS(RND(1001, 1200))
 LCLICK(844,183)
 WAITMS(RND(1001, 1200))
-LCLICK(808,303)     // заходим в группу
+LCLICK(808,303)                  // заходим в группу
 WAITMS(RND(1001, 1200))   
 LCLICK(797,531)
 WAITMS(RND(1001, 1200))   
 LCLICK(692,609)
 WAITMS(RND(1001, 1200))   
-LCLICK(990,536)   // устанавливаем время поста
+LCLICK(990,536)                  // устанавливаем время поста
 WAITMS(RND(1001, 1200))
-LCLICK(367,1056)  // переход в эксель
+LCLICK(367,1056)                 // переход в эксель
 WAITMS(RND(1001, 1200))
-LCLICK(129,1002)  // выбор первого листа
+LCLICK(129,1002)                 // выбор первого листа
 WAITMS(RND(1001, 1200))
-LCLICK(416,269)   // выделение заголовка 
+LCLICK(416,269)                  // выделение заголовка 
 WAITMS(RND(1001, 1200))
 KEYDOWN (#CTRL)
 WAITMS (50)
@@ -34,7 +32,7 @@ KEYDOWN (#CTRL)
 WAITMS (50)
 KEYPRESS (#V)
 KEYUP (#CTRL)
-WAITMS(RND(1001, 1200))     // копирование + вставка загловка
+WAITMS(RND(1001, 1200))           // копирование + вставка загловка
 KEYPRESS(#ENTER)
 WAITMS(100)
 KEYPRESS(#ENTER)
@@ -90,7 +88,7 @@ WAITMS(RND(5001, 5200))      // прокрутка экрана
 
 GETSCREEN()
 IF_PIXEL_IN (1033,147, 1181, 1033, 12091729)
- LCLICK($_return1, $_return2)
+   LCLICK($_return1, $_return2)
 END_IF
 WAITMS(RND(1201, 1800))     // анализ экрана + опубликовать
 
@@ -1945,8 +1943,3 @@ LCLICK(1895,25)  // Закрываем эксель
 WAITMS(RND(1001, 1200))
 LCLICK(880,567)  // подтверждаем
 WAITMS(RND(1001, 1200))
-
-
-
-
-
