@@ -2,13 +2,13 @@
 DEFINE($var2, 0)
 
 LCLICK(532,282)
-WAITMS(RND(1001, 1200))
+WAITMS(RND(1501, 1700))
 LCLICK(844,183)
-WAITMS(RND(1001, 1200))
+WAITMS(RND(2001, 2200))
 LCLICK(808,303)                  // заходим в группу
-WAITMS(RND(1001, 1200))   
+WAITMS(RND(2001, 2200))   
 LCLICK(797,531)
-WAITMS(RND(1001, 1200))   
+WAITMS(RND(2001, 2200))   
 LCLICK(692,609)
 WAITMS(RND(1001, 1200))   
 LCLICK(990,536)                  // устанавливаем время поста
@@ -462,6 +462,7 @@ WAITMS(RND(10001, 10200))
 LCLICK(1277,217)
 WAITMS(10000)
 
+$var = 0
 WHILE($var < 3)
    INC($var,1)
    GETSCREEN()
@@ -620,6 +621,7 @@ WAITMS(10000)
 LCLICK(1277,217)
 WAITMS(10000)
 
+$var = 0
 WHILE($var < 3)
    INC($var,1)
    GETSCREEN()
@@ -776,6 +778,7 @@ WAITMS(10000)
 LCLICK(1277,217)
 WAITMS(10000)
 
+$var = 0
 WHILE($var < 3)
    INC($var,1)
    GETSCREEN()
@@ -932,6 +935,7 @@ WAITMS(10000)
 LCLICK(1277,217)
 WAITMS(10000)
 
+$var = 0
 WHILE($var < 3)
    INC($var,1)
    GETSCREEN()
@@ -1092,6 +1096,7 @@ WAITMS(10000)
 LCLICK(1277,217)
 WAITMS(10000)
 
+$var = 0
 WHILE($var < 3)
    INC($var,1)
    GETSCREEN()
@@ -1512,9 +1517,9 @@ WHILE($var < 5)
    WHILE($var2 < 3)
       INC($var2,1)
       WAITMS(RND(1001, 1200))
-      GETSCREEN(1206, 671, 1607, 1001)
+      GETSCREEN(1460, 670, 1607, 950)
       WAITMS(RND(1001, 1200))
-      IF_PICTURE_IN (1206, 671, 1607, 1001, "follow.bmp", -1, 80)
+      IF_PICTURE_IN (1460, 670, 1607, 950, "follow.bmp", -1, 80)
          LCLICK($_return1, $_return2)
       END_IF
    END_CYC
