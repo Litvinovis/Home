@@ -387,35 +387,16 @@ KEYDOWN (#CTRL)
 WAITMS (50)
 KEYPRESS (#V)
 KEYUP (#CTRL)
-WAITMS(RND(1001, 1200))     // копирование + вставка загловка
+WAITMS(RND(1001, 1200))		// копирование + вставка загловка
 KEYPRESS(#ENTER)
 WAITMS(100)
 KEYPRESS(#ENTER)
 WAITMS(RND(1001, 1200))
-LCLICK(367,1056)  // переход в эксель
+LCLICK(367,1056)			// переход в эксель
 WAITMS(RND(1001, 1200))
-LCLICK(369,1002)  // выбор 5 листа
+LCLICK(369,1002)			// выбор 5 листа
 WAITMS(RND(1001, 1200))
-LCLICK(507,408)  // выделение основного текста
-WAITMS(RND(1001, 1200))
-KEYDOWN (#CTRL)
-WAITMS (50)
-KEYPRESS (#C)
-KEYUP (#CTRL)
-WAITMS(RND(1001, 1200))
-LCLICK(325,1068)
-WAITMS(RND(1001, 1200))
-WAITMS(RND(1001, 1200))
-KEYDOWN (#CTRL)
-WAITMS (50)
-KEYPRESS (#V)
-KEYUP (#CTRL)
-WAITMS(RND(1001, 1200))     // копирование + вставка основоного текста
-LCLICK(367,1056)  // переход в эксель
-WAITMS(RND(1001, 1200))
-LCLICK(369,1002)  // выбор 5 листа
-WAITMS(RND(1001, 1200))
-LCLICK(440,750)  // выделение картинки
+LCLICK(507,408)				// выделение основного текста
 WAITMS(RND(1001, 1200))
 KEYDOWN (#CTRL)
 WAITMS (50)
@@ -429,7 +410,26 @@ KEYDOWN (#CTRL)
 WAITMS (50)
 KEYPRESS (#V)
 KEYUP (#CTRL)
-WAITMS(RND(1001, 1200))     // копирование + вставка картинки
+WAITMS(RND(1001, 1200))		// копирование + вставка основоного текста
+LCLICK(367,1056)			// переход в эксель
+WAITMS(RND(1001, 1200))
+LCLICK(369,1002)			// выбор 5 листа
+WAITMS(RND(1001, 1200))
+LCLICK(440,750)				// выделение картинки
+WAITMS(RND(1001, 1200))
+KEYDOWN (#CTRL)
+WAITMS (50)
+KEYPRESS (#C)
+KEYUP (#CTRL)
+WAITMS(RND(1001, 1200))
+LCLICK(325,1068)
+WAITMS(RND(1001, 1200))
+WAITMS(RND(1001, 1200))
+KEYDOWN (#CTRL)
+WAITMS (50)
+KEYPRESS (#V)
+KEYUP (#CTRL)
+WAITMS(RND(1001, 1200))		// копирование + вставка картинки
 MOVE(1158,200)
 WAITMS(500)
 WHEELDOWN
@@ -439,25 +439,25 @@ WAITMS(500)
 WHEELDOWN
 WAITMS(500)
 WHEELDOWN
-WAITMS(RND(5001, 5200))       // прокрутка экрана
+WAITMS(RND(5001, 5200))		// прокрутка экрана
 
 GETSCREEN()
 IF_PIXEL_IN (1033,147, 1181, 1033, 12091729)
  LCLICK($_return1, $_return2)
 END_IF
-WAITMS(RND(1001, 1200))     // анализ экрана + опубликовать
+WAITMS(RND(1001, 1200))		// анализ экрана + опубликовать
 
 // конец выкладования новостей в группу
 
 vkper:
 LCLICK(1412,125)
 WAITMS(RND(2001, 2200))
-LCLICK(1256,295)  // выход из профиля
+LCLICK(1256,295)			// выход из профиля
 WAITMS(RND(1001, 1200))
 LCLICK(1343,219)
 WAITMS(1500)
 LCLICK(1001,141)
-WAITMS(8500)      // заходим в профиль Дениса Клочко
+WAITMS(8500)				// заходим в профиль Дениса Клочко
 LCLICK(518,256)
 WAITMS(RND(1001, 1200))
 LCLICK(518,256)
@@ -474,7 +474,7 @@ WHILE($var < 3)
       LCLICK($_return1, $_return2)  
    END_IF
    WAITMS(RND(1001, 1500))
-END_CYC         // анализ экрана + добавить в друзья
+END_CYC						// анализ экрана + добавить в друзья
 
 WAITMS(RND(1001, 1200))
 LCLICK(518,256)
@@ -488,10 +488,10 @@ WHILE($var < 5)
  WAITMS(1569)
  LCLICK(1320,478)     
  WAITMS(1931)
-END_CYC         // цикл добавления рекомендуемых друзей
+END_CYC						// цикл добавления рекомендуемых друзей
 
 
-LCLICK(546,169)  // переход на "мою страницу"   
+LCLICK(546,169)				// переход на "мою страницу"   
 WAITMS(RND(2001, 2200))
 WHEELDOWN
 WAITMS(500)
@@ -502,15 +502,15 @@ WAITMS(500)
 WHEELDOWN
 WAITMS(500)
 WHEELDOWN
-WAITMS(500)      // прокрутка экрана
+WAITMS(500)					// прокрутка экрана
 LCLICK(1100,210)     
 WAITMS(RND(1001, 1200))
 
-LCLICK(367,1056)  // переход в эксель
+LCLICK(367,1056)			// переход в эксель
 WAITMS(RND(1001, 1200))
-LCLICK(129,1002)  // выбор первого листа
+LCLICK(129,1002)			// выбор первого листа
 WAITMS(RND(1001, 1200))
-LCLICK(416,269)   // выделение заголовка 
+LCLICK(416,269)				// выделение заголовка 
 WAITMS(RND(1001, 1200))
 KEYDOWN (#CTRL)
 WAITMS (50)
@@ -530,11 +530,11 @@ KEYPRESS(#ENTER)
 WAITMS(100)
 KEYPRESS(#ENTER)
 WAITMS(RND(1001, 1200))
-LCLICK(367,1056)  // переход в эксель
+LCLICK(367,1056)			// переход в эксель
 WAITMS(RND(1001, 1200))
-LCLICK(129,1002)  // выбор первого листа
+LCLICK(129,1002)			// выбор первого листа
 WAITMS(RND(1001, 1200))
-LCLICK(507,408)  // выделение основного текста
+LCLICK(507,408)				// выделение основного текста
 WAITMS(RND(1001, 1200))
 KEYDOWN (#CTRL)
 WAITMS (50)
@@ -547,12 +547,12 @@ KEYDOWN (#CTRL)
 WAITMS (50)
 KEYPRESS (#V)
 KEYUP (#CTRL)
-WAITMS(RND(1001, 1200))      // копирование + вставка основоного текста
-LCLICK(367,1056)  // переход в эксель
+WAITMS(RND(1001, 1200))		// копирование + вставка основоного текста
+LCLICK(367,1056)			// переход в эксель
 WAITMS(RND(1001, 1200))
-LCLICK(129,1002)  // выбор первого листа
+LCLICK(129,1002)			// выбор первого листа
 WAITMS(RND(1001, 1200))
-LCLICK(440,750)   // выделение картинки
+LCLICK(440,750)				// выделение картинки
 WAITMS(RND(1001, 1200))
 KEYDOWN (#CTRL)
 WAITMS (50)
@@ -566,18 +566,18 @@ KEYDOWN (#CTRL)
 WAITMS (50)
 KEYPRESS (#V)
 KEYUP (#CTRL)
-WAITMS(RND(1001, 1200))     // копирование + вставка картинки
+WAITMS(RND(1001, 1200))		// копирование + вставка картинки
 WHEELDOWN
 WAITMS(500)
 WHEELDOWN
-WAITMS(RND(5001, 5200))       // прокрутка экрана
+WAITMS(RND(5001, 5200))		// прокрутка экрана
 
 GETSCREEN()
 WAITMS(RND(1001, 1200))
 IF_PIXEL_IN (1264,161, 1434, 1038, 12091729)
  LCLICK($_return1, $_return2)
 END_IF
-WAITMS(RND(1001, 1200))     // анализ экрана + опубликовать
+WAITMS(RND(1001, 1200))		// анализ экрана + опубликовать
 
 WAITMS(RND(1001, 1200))
 LCLICK(45,172)
@@ -585,7 +585,8 @@ WAITMS(RND(3001, 3200))
 LCLICK(539,285)
 WAITMS(RND(3001, 3200))
 LCLICK(821,301)
-WAITMS(RND(3001, 3200))     // заходим в группу
+WAITMS(RND(3001, 3200))		// заходим в группу
+
 $var = 0
 WHILE($var < 8)
    INC($var,1)  
@@ -600,23 +601,23 @@ WHILE($var < 8)
    WHEELDOWN
    WAITMS(500)
    WHEELDOWN
-   WAITMS(500)      // прокрутка экрана
+   WAITMS(500)				// прокрутка экрана
    GETSCREEN()
    IF_PIXEL_IN (638,152, 685, 1034, 12959160)
     LCLICK($_return1, $_return2)
    END_IF
-   WAITMS(RND(1001, 1200))     // анализ экрана + опубликовать 
+   WAITMS(RND(1001, 1200))	// анализ экрана + опубликовать 
 END_CYC
 
 // Начало постов Артема
 LCLICK(1412,125)
 WAITMS(RND(2001, 2200))
-LCLICK(1256,295)  // выход из профиля
+LCLICK(1256,295)			// выход из профиля
 WAITMS(RND(1001, 1200))
 LCLICK(1343,219)
 WAITMS(1500)
 LCLICK(893,201)
-WAITMS(10000)      // заходим в профиль Артема
+WAITMS(10000)				// заходим в профиль Артема
 LCLICK(518,256)
 WAITMS(RND(1001, 1200))
 LCLICK(518,256)
