@@ -190,13 +190,13 @@ LCLICK(797,531)
 WAITMS(RND(1001, 1200))   
 LCLICK(692,609)
 WAITMS(RND(1001, 1200))   
-LCLICK(990,536)   // устанавливаем время поста
+LCLICK(990,536)				// устанавливаем время поста
 WAITMS(RND(1001, 1200))
-LCLICK(367,1056)  // переход в эксель
+LCLICK(367,1056)			// переход в эксель
 WAITMS(RND(1001, 1200))
-LCLICK(251,1002)  // выбор 3 листа
+LCLICK(251,1002)			// выбор 3 листа
 WAITMS(RND(1001, 1200))
-LCLICK(416,269)   // выделение заголовка 
+LCLICK(416,269)				// выделение заголовка 
 WAITMS(RND(1001, 1200))
 KEYDOWN (#CTRL)
 WAITMS (50)
@@ -211,35 +211,16 @@ KEYDOWN (#CTRL)
 WAITMS (50)
 KEYPRESS (#V)
 KEYUP (#CTRL)
-WAITMS(RND(1001, 1200))     // копирование + вставка загловка
+WAITMS(RND(1001, 1200))		// копирование + вставка загловка
 KEYPRESS(#ENTER)
 WAITMS(100)
 KEYPRESS(#ENTER)
 WAITMS(RND(1001, 1200))
-LCLICK(367,1056)  // переход в эксель
+LCLICK(367,1056)			// переход в эксель
 WAITMS(RND(1001, 1200))
-LCLICK(251,1002)  // выбор 3 листа
+LCLICK(251,1002)			// выбор 3 листа
 WAITMS(RND(1001, 1200))
-LCLICK(507,408)  // выделение основного текста
-WAITMS(RND(1001, 1200))
-KEYDOWN (#CTRL)
-WAITMS (50)
-KEYPRESS (#C)
-KEYUP (#CTRL)
-WAITMS(RND(1001, 1200))
-LCLICK(325,1068)
-WAITMS(RND(1001, 1200))
-WAITMS(RND(1001, 1200))
-KEYDOWN (#CTRL)
-WAITMS (50)
-KEYPRESS (#V)
-KEYUP (#CTRL)
-WAITMS(RND(1001, 1200))     // копирование + вставка основоного текста
-LCLICK(367,1056)  // переход в эксель
-WAITMS(RND(1001, 1200))
-LCLICK(251,1002)  // выбор 3 листа
-WAITMS(RND(1001, 1200))
-LCLICK(440,750)  // выделение картинки
+LCLICK(507,408)				// выделение основного текста
 WAITMS(RND(1001, 1200))
 KEYDOWN (#CTRL)
 WAITMS (50)
@@ -253,7 +234,26 @@ KEYDOWN (#CTRL)
 WAITMS (50)
 KEYPRESS (#V)
 KEYUP (#CTRL)
-WAITMS(RND(1001, 1200))     // копирование + вставка картинки
+WAITMS(RND(1001, 1200))		// копирование + вставка основоного текста
+LCLICK(367,1056)			// переход в эксель
+WAITMS(RND(1001, 1200))
+LCLICK(251,1002)			// выбор 3 листа
+WAITMS(RND(1001, 1200))
+LCLICK(440,750)				// выделение картинки
+WAITMS(RND(1001, 1200))
+KEYDOWN (#CTRL)
+WAITMS (50)
+KEYPRESS (#C)
+KEYUP (#CTRL)
+WAITMS(RND(1001, 1200))
+LCLICK(325,1068)
+WAITMS(RND(1001, 1200))
+WAITMS(RND(1001, 1200))
+KEYDOWN (#CTRL)
+WAITMS (50)
+KEYPRESS (#V)
+KEYUP (#CTRL)
+WAITMS(RND(1001, 1200))		// копирование + вставка картинки
 MOVE(1158,200)
 WAITMS(500)
 WHEELDOWN
@@ -263,13 +263,13 @@ WAITMS(500)
 WHEELDOWN
 WAITMS(500)
 WHEELDOWN
-WAITMS(RND(5001, 5200))       // прокрутка экрана
+WAITMS(RND(5001, 5200))		// прокрутка экрана
 
 GETSCREEN()
 IF_PIXEL_IN (1033,147, 1181, 1033, 12091729)
  LCLICK($_return1, $_return2)
 END_IF
-WAITMS(RND(1001, 1200))     // анализ экрана + опубликовать
+WAITMS(RND(1001, 1200))		// анализ экрана + опубликовать
 
 // начало вставки четвертой новости в группу 
 LCLICK(51,172)
@@ -278,13 +278,13 @@ LCLICK(797,531)
 WAITMS(RND(1001, 1200))   
 LCLICK(692,609)
 WAITMS(RND(1001, 1200))   
-LCLICK(990,536)   // устанавливаем время поста
+LCLICK(990,536)				// устанавливаем время поста
 WAITMS(RND(1001, 1200))
-LCLICK(367,1056)  // переход в эксель
+LCLICK(367,1056)			// переход в эксель
 WAITMS(RND(1001, 1200))
-LCLICK(315,1002)  // выбор 4 листа
+LCLICK(315,1002)			// выбор 4 листа
 WAITMS(RND(1001, 1200))
-LCLICK(416,269)   // выделение заголовка 
+LCLICK(416,269)				// выделение заголовка 
 WAITMS(RND(1001, 1200))
 KEYDOWN (#CTRL)
 WAITMS (50)
@@ -304,30 +304,11 @@ KEYPRESS(#ENTER)
 WAITMS(100)
 KEYPRESS(#ENTER)
 WAITMS(RND(1001, 1200))
-LCLICK(367,1056)  // переход в эксель
+LCLICK(367,1056)			// переход в эксель
 WAITMS(RND(1001, 1200))
-LCLICK(315,1002)  // выбор 4 листа
+LCLICK(315,1002)			// выбор 4 листа
 WAITMS(RND(1001, 1200))
-LCLICK(507,408)  // выделение основного текста
-WAITMS(RND(1001, 1200))
-KEYDOWN (#CTRL)
-WAITMS (50)
-KEYPRESS (#C)
-KEYUP (#CTRL)
-WAITMS(RND(1001, 1200))
-LCLICK(325,1068)
-WAITMS(RND(1001, 1200))
-WAITMS(RND(1001, 1200))
-KEYDOWN (#CTRL)
-WAITMS (50)
-KEYPRESS (#V)
-KEYUP (#CTRL)
-WAITMS(RND(1001, 1200))     // копирование + вставка основоного текста
-LCLICK(367,1056)  // переход в эксель
-WAITMS(RND(1001, 1200))
-LCLICK(315,1002)  // выбор 4 листа
-WAITMS(RND(1001, 1200))
-LCLICK(440,750)  // выделение картинки
+LCLICK(507,408)				// выделение основного текста
 WAITMS(RND(1001, 1200))
 KEYDOWN (#CTRL)
 WAITMS (50)
@@ -341,7 +322,26 @@ KEYDOWN (#CTRL)
 WAITMS (50)
 KEYPRESS (#V)
 KEYUP (#CTRL)
-WAITMS(RND(1001, 1200))     // копирование + вставка картинки
+WAITMS(RND(1001, 1200))		// копирование + вставка основоного текста
+LCLICK(367,1056)			// переход в эксель
+WAITMS(RND(1001, 1200))
+LCLICK(315,1002)			// выбор 4 листа
+WAITMS(RND(1001, 1200))
+LCLICK(440,750)				// выделение картинки
+WAITMS(RND(1001, 1200))
+KEYDOWN (#CTRL)
+WAITMS (50)
+KEYPRESS (#C)
+KEYUP (#CTRL)
+WAITMS(RND(1001, 1200))
+LCLICK(325,1068)
+WAITMS(RND(1001, 1200))
+WAITMS(RND(1001, 1200))
+KEYDOWN (#CTRL)
+WAITMS (50)
+KEYPRESS (#V)
+KEYUP (#CTRL)
+WAITMS(RND(1001, 1200))		// копирование + вставка картинки
 MOVE(1158,200)
 WAITMS(500)
 WHEELDOWN
@@ -351,13 +351,13 @@ WAITMS(500)
 WHEELDOWN
 WAITMS(500)
 WHEELDOWN
-WAITMS(RND(5001, 5200))       // прокрутка экрана
+WAITMS(RND(5001, 5200))		// прокрутка экрана
 
 GETSCREEN()
 IF_PIXEL_IN (1033,147, 1181, 1033, 12091729)
  LCLICK($_return1, $_return2)
 END_IF
-WAITMS(RND(1001, 1200))     // анализ экрана + опубликовать
+WAITMS(RND(1001, 1200))		// анализ экрана + опубликовать
 
 // начало вставки пятой новости в группу 
 LCLICK(51,172)
@@ -366,13 +366,13 @@ LCLICK(797,531)
 WAITMS(RND(1001, 1200))   
 LCLICK(692,609)
 WAITMS(RND(1001, 1200))   
-LCLICK(990,536)   // устанавливаем время поста
+LCLICK(990,536)				// устанавливаем время поста
 WAITMS(RND(1001, 1200))
-LCLICK(367,1056)  // переход в эксель
+LCLICK(367,1056)			// переход в эксель
 WAITMS(RND(1001, 1200))
-LCLICK(369,1002)  // выбор 4 листа
+LCLICK(369,1002)			// выбор 4 листа
 WAITMS(RND(1001, 1200))
-LCLICK(416,269)   // выделение заголовка 
+LCLICK(416,269)				// выделение заголовка 
 WAITMS(RND(1001, 1200))
 KEYDOWN (#CTRL)
 WAITMS (50)
