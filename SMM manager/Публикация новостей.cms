@@ -1,15 +1,16 @@
 ﻿DEFINE($var, 0)
-DEFINE($var2, 0)
+DEFINE($var2, 0)   
 
+goto(fbper)
 
-LCLICK(532,282)
+LCLICK(546,302)
 WAITMS(RND(1501, 1700))
 LCLICK(844,183)
-WAITMS(RND(2001, 2200))
+WAITMS(RND(2501, 2900))
 LCLICK(808,303)				// заходим в группу
-WAITMS(RND(2001, 2200))   
+WAITMS(RND(2501, 2900))   
 LCLICK(797,531)
-WAITMS(RND(2001, 2200))   
+WAITMS(RND(2501, 2900))   
 LCLICK(692,609)
 WAITMS(RND(1001, 1200))   
 LCLICK(990,536)				// устанавливаем время поста
@@ -582,7 +583,7 @@ WAITMS(RND(1001, 1200))		// анализ экрана + опубликовать
 WAITMS(RND(1001, 1200))
 LCLICK(45,172)
 WAITMS(RND(3001, 3200))
-LCLICK(539,285)
+LCLICK(546,302)
 WAITMS(RND(3001, 3200))
 LCLICK(821,301)
 WAITMS(RND(3001, 3200))		// заходим в группу
@@ -740,7 +741,7 @@ WAITMS(RND(1001, 1200))     // анализ экрана + опубликова�
 WAITMS(RND(1001, 1200))
 LCLICK(45,172)
 WAITMS(RND(3001, 3200))
-LCLICK(539,285)
+LCLICK(546,302)
 WAITMS(RND(3001, 3200))
 LCLICK(821,301)
 WAITMS(RND(3001, 3200))     // заходим в группу
@@ -897,7 +898,7 @@ WAITMS(RND(1001, 1200))     // анализ экрана + опубликова�
 WAITMS(RND(1001, 1200))
 LCLICK(45,172)
 WAITMS(RND(3001, 3200))
-LCLICK(539,285)
+LCLICK(546,302)
 WAITMS(RND(3001, 3200))
 LCLICK(821,301)
 WAITMS(RND(3001, 3200))     // заходим в группу
@@ -922,6 +923,7 @@ WHILE($var < 8)
    END_IF
    WAITMS(RND(1001, 1200))     // анализ экрана + лайк
 END_CYC
+
 
 // начало постов Рахима
 LCLICK(1412,125)
@@ -1054,7 +1056,7 @@ WAITMS(RND(1001, 1200))     // анализ экрана + опубликова�
 WAITMS(RND(1001, 1200))
 LCLICK(45,172)
 WAITMS(RND(3001, 3200))
-LCLICK(539,285)
+LCLICK(546,302)
 WAITMS(RND(3001, 3200))
 LCLICK(821,301)
 WAITMS(RND(3001, 3200))     // заходим в группу
@@ -1216,7 +1218,7 @@ WAITMS(RND(1001, 1200))     // анализ экрана + опубликова�
 WAITMS(RND(1001, 1200))
 LCLICK(45,172)
 WAITMS(RND(3001, 3200))
-LCLICK(539,285)
+LCLICK(546,302)
 WAITMS(RND(3001, 3200))
 LCLICK(821,301)
 WAITMS(RND(3001, 3200))     // заходим в группу
@@ -1267,7 +1269,7 @@ KEYUP (#CTRL)
 WAITMS(RND(1001, 1200))
 LCLICK(308,1057) 
 WAITMS(RND(1001, 1200))
-LCLICK(823,430) 
+LCLICK(823,486) 
 WAITMS(RND(1001, 1200))
 LCLICK(784,491)
 WAITMS(RND(1001, 1200))
@@ -1523,10 +1525,22 @@ WHILE($var < 5)
       WAITMS(RND(1001, 1200))
       GETSCREEN(1460, 670, 1607, 950)
       WAITMS(RND(1001, 1200))
-      IF_PICTURE_IN (1460, 670, 1607, 950, "follow.bmp", -1, 80)
+      IF_PICTURE_IN (1460, 670, 1607, 950, "fillow.bmp", -1, 80)
          LCLICK($_return1, $_return2)
       END_IF
    END_CYC
+   
+   $var2 = 0 
+   WHILE($var2 < 3)
+      INC($var2,1)
+      WAITMS(RND(1001, 1200))
+      GETSCREEN(1460, 670, 1607, 950)
+      WAITMS(RND(1001, 1200))
+      IF_PICTURE_IN (1460, 670, 1607, 950, "chitat.bmp", -1, 80)
+         LCLICK($_return1, $_return2)
+      END_IF
+   END_CYC
+   
    WAITMS(RND(1001, 1200))
    LCLICK(80,56)              // обновление страницы
    WAITMS(RND(3001, 3200))
@@ -1648,14 +1662,28 @@ WHILE($var < 5)
       WAITMS(RND(1001, 1200))
       GETSCREEN(1206, 671, 1607, 1001)
       WAITMS(RND(1001, 1200))
-      IF_PICTURE_IN (1206, 671, 1607, 1001, "follow.bmp", -1, 80)
+      IF_PICTURE_IN (1206, 671, 1607, 1001, "fillow.bmp", -1, 70)
          LCLICK($_return1, $_return2)
       END_IF
    END_CYC
+   
+   $var2 = 0 
+   WHILE($var2 < 3)
+      INC($var2,1)
+      WAITMS(RND(1001, 1200))
+      GETSCREEN(1460, 670, 1607, 950)
+      WAITMS(RND(1001, 1200))
+      IF_PICTURE_IN (1460, 670, 1607, 950, "chitat.bmp", -1, 80)
+         LCLICK($_return1, $_return2)
+      END_IF
+   END_CYC
+   
    WAITMS(RND(1001, 1200))
    LCLICK(80,56)              // обновление страницы
    WAITMS(RND(3001, 3200))
    INC($var,1)
+   
+   
 END_CYC                      // цикл подписки на рекомендации
 
 LCLICK(531,991)  
@@ -1769,10 +1797,23 @@ WHILE($var < 5)
       WAITMS(RND(1001, 1200))
       GETSCREEN(1206, 671, 1607, 1001)
       WAITMS(RND(1001, 1200))
-      IF_PICTURE_IN (1206, 671, 1607, 1001, "follow.bmp", -1, 80)
+      IF_PICTURE_IN (1206, 671, 1607, 1001, "fillow.bmp", -1, 80)
          LCLICK($_return1, $_return2)
       END_IF
    END_CYC
+   
+      
+   $var2 = 0 
+   WHILE($var2 < 3)
+      INC($var2,1)
+      WAITMS(RND(1001, 1200))
+      GETSCREEN(1460, 670, 1607, 950)
+      WAITMS(RND(1001, 1200))
+      IF_PICTURE_IN (1460, 670, 1607, 950, "chitat.bmp", -1, 80)
+         LCLICK($_return1, $_return2)
+      END_IF
+   END_CYC
+   
    WAITMS(RND(1001, 1200))
    LCLICK(80,56)              // обновление страницы
    WAITMS(RND(3001, 3200))
@@ -1894,10 +1935,22 @@ WHILE($var < 5)
       WAITMS(RND(1001, 1200))
       GETSCREEN(1206, 671, 1607, 1001)
       WAITMS(RND(1001, 1200))
-      IF_PICTURE_IN (1206, 671, 1607, 1001, "follow.bmp", -1, 80)
+      IF_PICTURE_IN (1206, 671, 1607, 1001, "fillow.bmp", -1, 80)
          LCLICK($_return1, $_return2)
       END_IF
    END_CYC
+      
+   $var2 = 0 
+   WHILE($var2 < 3)
+      INC($var2,1)
+      WAITMS(RND(1001, 1200))
+      GETSCREEN(1460, 670, 1607, 950)
+      WAITMS(RND(1001, 1200))
+      IF_PICTURE_IN (1460, 670, 1607, 950, "chitat.bmp", -1, 80)
+         LCLICK($_return1, $_return2)
+      END_IF
+   END_CYC
+   
    WAITMS(RND(1001, 1200))
    LCLICK(80,56)              // обновление страницы
    WAITMS(RND(3001, 3200))
@@ -1920,14 +1973,15 @@ WAITMS(RND(1001, 1200))
 
 igper:
 LCLICK(1412,295)  // нажимаем на "Все"
-WAITMS(RND(1001, 1200))
+WAITMS(RND(1501, 1900))
 $var = 0
-WHILE($var < 10)
+WHILE($var < 15)
    INC($var,1)
+   WAITMS(RND(2001, 2200))
    GETSCREEN(1120, 211, 1257, 1005)
-   WAITMS(RND(3001, 3200))
    IF_PIXEL_IN (1120, 211, 1257, 1005, 16160000)
     LCLICK($_return1, $_return2)
+   WAITMS(RND(1001, 1200))
    END_IF
 END_CYC         // Подписка
 $var = 0
@@ -1937,18 +1991,31 @@ WHILE($var < 10)
    WAITMS(RND(1001, 1200))
 END_CYC        // прокрутка 
 $var = 0
-WHILE($var < 10)
+WHILE($var < 15)
    INC($var,1)
+   WAITMS(RND(2001, 2200))
    GETSCREEN(1120, 211, 1257, 1005)
-   WAITMS(RND(3001, 3200))
    IF_PIXEL_IN (1120, 211, 1257, 1005, 16160000)
     LCLICK($_return1, $_return2)
+   WAITMS(RND(1001, 1200))
    END_IF
-END_CYC          // Подписка
-WAITMS(RND(3001, 3200))
-LCLICK(1895,25)  // Закрываем браузер
-WAITMS(RND(3001, 3200))
-LCLICK(1895,25)  // Закрываем эксель
-WAITMS(RND(1001, 1200))
-LCLICK(880,567)  // подтверждаем
-WAITMS(RND(1001, 1200))
+END_CYC         // Подписка
+$var = 0
+WHILE($var < 10)
+   INC($var,1)
+   WHEELDOWN
+   WAITMS(RND(1001, 1200))
+END_CYC        // прокрутка 
+$var = 0
+WHILE($var < 15)
+   INC($var,1)
+   WAITMS(RND(2001, 2200))
+   GETSCREEN(1120, 211, 1257, 1005)
+   IF_PIXEL_IN (1120, 211, 1257, 1005, 16160000)
+    LCLICK($_return1, $_return2)
+   WAITMS(RND(1001, 1200))
+   END_IF
+END_CYC         // Подписка
+
+
+WAIT(3600)
