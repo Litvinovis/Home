@@ -1,8 +1,10 @@
-﻿DEFINE($var, 0)
-DEFINE($var2, 0)   
+﻿#include "SMMlibrary.cms"
 
-goto(fbper)
+DEFINE($var, 0)
+DEFINE($var2, 0)
+DEFINE($post, 0)
 
+// начало выкладования новостей в группу
 LCLICK(546,302)
 WAITMS(RND(1501, 1700))
 LCLICK(844,183)
@@ -14,443 +16,19 @@ WAITMS(RND(2501, 2900))
 LCLICK(692,609)
 WAITMS(RND(1001, 1200))   
 LCLICK(990,536)				// устанавливаем время поста
-WAITMS(RND(1001, 1200))
-LCLICK(367,1056)			// переход в эксель
-WAITMS(RND(1001, 1200))
-LCLICK(129,1002)			// выбор первого листа
-WAITMS(RND(1001, 1200))
-LCLICK(416,269)				// выделение заголовка 
-WAITMS(RND(1001, 1200))
-KEYDOWN (#CTRL)
-WAITMS (50)
-KEYPRESS (#C)
-KEYUP (#CTRL)
-WAITMS(RND(1001, 1200))
-LCLICK(325,1068)
-WAITMS(RND(1001, 1200))
-LCLICK(772,534)
-WAITMS(RND(1001, 1200))
-KEYDOWN (#CTRL)
-WAITMS (50)
-KEYPRESS (#V)
-KEYUP (#CTRL)
-WAITMS(RND(1001, 1200))		// копирование + вставка загловка
-KEYPRESS(#ENTER)
-WAITMS(100)
-KEYPRESS(#ENTER)
-WAITMS(RND(1001, 1200))
-LCLICK(367,1056)			// переход в эксель
-WAITMS(RND(1001, 1200))
-LCLICK(129,1002)			// выбор первого листа
-WAITMS(RND(1001, 1200))
-LCLICK(507,408)				// выделение основного текста
-WAITMS(RND(1001, 1200))
-KEYDOWN (#CTRL)
-WAITMS (50)
-KEYPRESS (#C)
-KEYUP (#CTRL)
-WAITMS(RND(1001, 1200))
-LCLICK(325,1068)
-WAITMS(RND(1001, 1200))
-WAITMS(RND(1001, 1200))
-KEYDOWN (#CTRL)
-WAITMS (50)
-KEYPRESS (#V)
-KEYUP (#CTRL)
-WAITMS(RND(1001, 1200))		// копирование + вставка основоного текста
-LCLICK(367,1056)			// переход в эксель
-WAITMS(RND(1001, 1200))
-LCLICK(129,1002)			// выбор первого листа
-WAITMS(RND(1001, 1200))
-LCLICK(440,750)				// выделение картинки
-WAITMS(RND(1001, 1200))
-KEYDOWN (#CTRL)
-WAITMS (50)
-KEYPRESS (#C)
-KEYUP (#CTRL)
-WAITMS(RND(1001, 1200))
-LCLICK(325,1068)
-WAITMS(RND(1001, 1200))
-WAITMS(RND(1001, 1200))
-KEYDOWN (#CTRL)
-WAITMS (50)
-KEYPRESS (#V)
-KEYUP (#CTRL)
-WAITMS(RND(1001, 1200))     // копирование + вставка картинки
-MOVE(1158,200)
-WAITMS(500)
-WHEELDOWN
-WAITMS(500)
-WHEELDOWN
-WAITMS(500)
-WHEELDOWN
-WAITMS(500)
-WHEELDOWN
-WAITMS(RND(5001, 5200))		// прокрутка экрана
-
-
-GETSCREEN()
-IF_PIXEL_IN (1033,147, 1181, 1033, 12091729)
-   LCLICK($_return1, $_return2)
-END_IF
-WAITMS(RND(1201, 1800))		// анализ экрана + опубликовать
-
-
-							// начало вставки второй новости
+VKGroupPost(1)
+LCLICK(51,172)        // возврат наверх страницы
+VKGroupPost(2)
 LCLICK(51,172)
-WAITMS(RND(1001, 1200))
-LCLICK(797,531)
-WAITMS(RND(1001, 1200))   
-LCLICK(692,609)
-WAITMS(RND(1001, 1200))   
-LCLICK(990,536)				// устанавливаем время поста
-WAITMS(RND(1001, 1200))
-LCLICK(367,1056)			// переход в эксель
-WAITMS(RND(1001, 1200))
-LCLICK(195,1002)			// выбор второго листа
-WAITMS(RND(1001, 1200))
-LCLICK(416,269)				// выделение заголовка 
-WAITMS(RND(1001, 1200))
-KEYDOWN (#CTRL)
-WAITMS (50)
-KEYPRESS (#C)
-KEYUP (#CTRL)
-WAITMS(RND(1001, 1200))
-LCLICK(325,1068)
-WAITMS(RND(1001, 1200))
-LCLICK(772,534)
-WAITMS(RND(1001, 1200))
-KEYDOWN (#CTRL)
-WAITMS (50)
-KEYPRESS (#V)
-KEYUP (#CTRL)
-WAITMS(RND(1001, 1200))		// копирование + вставка загловка
-KEYPRESS(#ENTER)
-WAITMS(100)
-KEYPRESS(#ENTER)
-WAITMS(RND(1001, 1200))
-LCLICK(367,1056)			// переход в эксель
-WAITMS(RND(1001, 1200))
-LCLICK(195,1002)			// выбор второго листа
-WAITMS(RND(1001, 1200))
-LCLICK(507,408)				// выделение основного текста
-WAITMS(RND(1001, 1200))
-KEYDOWN (#CTRL)
-WAITMS (50)
-KEYPRESS (#C)
-KEYUP (#CTRL)
-WAITMS(RND(1001, 1200))
-LCLICK(325,1068)
-WAITMS(RND(1001, 1200))
-WAITMS(RND(1001, 1200))
-KEYDOWN (#CTRL)
-WAITMS (50)
-KEYPRESS (#V)
-KEYUP (#CTRL)
-WAITMS(RND(1001, 1200))		// копирование + вставка основоного текста
-LCLICK(367,1056)			// переход в эксель
-WAITMS(RND(1001, 1200))
-LCLICK(195,1002)			// выбор второго листа
-WAITMS(RND(1001, 1200))
-LCLICK(440,750)				// выделение картинки
-WAITMS(RND(1001, 1200))
-KEYDOWN (#CTRL)
-WAITMS (50)
-KEYPRESS (#C)
-KEYUP (#CTRL)
-WAITMS(RND(1001, 1200))
-LCLICK(325,1068)
-WAITMS(RND(1001, 1200))
-WAITMS(RND(1001, 1200))
-KEYDOWN (#CTRL)
-WAITMS (50)
-KEYPRESS (#V)
-KEYUP (#CTRL)
-WAITMS(RND(1001, 1200))		// копирование + вставка картинки
-MOVE(1158,200)
-WAITMS(500)
-WHEELDOWN
-WAITMS(500)
-WHEELDOWN
-WAITMS(500)
-WHEELDOWN
-WAITMS(500)
-WHEELDOWN
-WAITMS(RND(5001, 5200))		// прокрутка экрана
-
-GETSCREEN()
-IF_PIXEL_IN (1033,147, 1181, 1033, 12091729)
- LCLICK($_return1, $_return2)
-END_IF
-WAITMS(RND(1001, 1200))		// анализ экрана + опубликовать
-
-// начало вставки третьей новости в группу 
+VKGroupPost(3)
 LCLICK(51,172)
-WAITMS(RND(1001, 1200))
-LCLICK(797,531)
-WAITMS(RND(1001, 1200))   
-LCLICK(692,609)
-WAITMS(RND(1001, 1200))   
-LCLICK(990,536)				// устанавливаем время поста
-WAITMS(RND(1001, 1200))
-LCLICK(367,1056)			// переход в эксель
-WAITMS(RND(1001, 1200))
-LCLICK(251,1002)			// выбор 3 листа
-WAITMS(RND(1001, 1200))
-LCLICK(416,269)				// выделение заголовка 
-WAITMS(RND(1001, 1200))
-KEYDOWN (#CTRL)
-WAITMS (50)
-KEYPRESS (#C)
-KEYUP (#CTRL)
-WAITMS(RND(1001, 1200))
-LCLICK(325,1068)
-WAITMS(RND(1001, 1200))
-LCLICK(772,534)
-WAITMS(RND(1001, 1200))
-KEYDOWN (#CTRL)
-WAITMS (50)
-KEYPRESS (#V)
-KEYUP (#CTRL)
-WAITMS(RND(1001, 1200))		// копирование + вставка загловка
-KEYPRESS(#ENTER)
-WAITMS(100)
-KEYPRESS(#ENTER)
-WAITMS(RND(1001, 1200))
-LCLICK(367,1056)			// переход в эксель
-WAITMS(RND(1001, 1200))
-LCLICK(251,1002)			// выбор 3 листа
-WAITMS(RND(1001, 1200))
-LCLICK(507,408)				// выделение основного текста
-WAITMS(RND(1001, 1200))
-KEYDOWN (#CTRL)
-WAITMS (50)
-KEYPRESS (#C)
-KEYUP (#CTRL)
-WAITMS(RND(1001, 1200))
-LCLICK(325,1068)
-WAITMS(RND(1001, 1200))
-WAITMS(RND(1001, 1200))
-KEYDOWN (#CTRL)
-WAITMS (50)
-KEYPRESS (#V)
-KEYUP (#CTRL)
-WAITMS(RND(1001, 1200))		// копирование + вставка основоного текста
-LCLICK(367,1056)			// переход в эксель
-WAITMS(RND(1001, 1200))
-LCLICK(251,1002)			// выбор 3 листа
-WAITMS(RND(1001, 1200))
-LCLICK(440,750)				// выделение картинки
-WAITMS(RND(1001, 1200))
-KEYDOWN (#CTRL)
-WAITMS (50)
-KEYPRESS (#C)
-KEYUP (#CTRL)
-WAITMS(RND(1001, 1200))
-LCLICK(325,1068)
-WAITMS(RND(1001, 1200))
-WAITMS(RND(1001, 1200))
-KEYDOWN (#CTRL)
-WAITMS (50)
-KEYPRESS (#V)
-KEYUP (#CTRL)
-WAITMS(RND(1001, 1200))		// копирование + вставка картинки
-MOVE(1158,200)
-WAITMS(500)
-WHEELDOWN
-WAITMS(500)
-WHEELDOWN
-WAITMS(500)
-WHEELDOWN
-WAITMS(500)
-WHEELDOWN
-WAITMS(RND(5001, 5200))		// прокрутка экрана
-
-GETSCREEN()
-IF_PIXEL_IN (1033,147, 1181, 1033, 12091729)
- LCLICK($_return1, $_return2)
-END_IF
-WAITMS(RND(1001, 1200))		// анализ экрана + опубликовать
-
-// начало вставки четвертой новости в группу 
+VKGroupPost(4)
 LCLICK(51,172)
-WAITMS(RND(1001, 1200))
-LCLICK(797,531)
-WAITMS(RND(1001, 1200))   
-LCLICK(692,609)
-WAITMS(RND(1001, 1200))   
-LCLICK(990,536)				// устанавливаем время поста
-WAITMS(RND(1001, 1200))
-LCLICK(367,1056)			// переход в эксель
-WAITMS(RND(1001, 1200))
-LCLICK(315,1002)			// выбор 4 листа
-WAITMS(RND(1001, 1200))
-LCLICK(416,269)				// выделение заголовка 
-WAITMS(RND(1001, 1200))
-KEYDOWN (#CTRL)
-WAITMS (50)
-KEYPRESS (#C)
-KEYUP (#CTRL)
-WAITMS(RND(1001, 1200))
-LCLICK(325,1068)
-WAITMS(RND(1001, 1200))
-LCLICK(772,534)
-WAITMS(RND(1001, 1200))
-KEYDOWN (#CTRL)
-WAITMS (50)
-KEYPRESS (#V)
-KEYUP (#CTRL)
-WAITMS(RND(1001, 1200))     // копирование + вставка загловка
-KEYPRESS(#ENTER)
-WAITMS(100)
-KEYPRESS(#ENTER)
-WAITMS(RND(1001, 1200))
-LCLICK(367,1056)			// переход в эксель
-WAITMS(RND(1001, 1200))
-LCLICK(315,1002)			// выбор 4 листа
-WAITMS(RND(1001, 1200))
-LCLICK(507,408)				// выделение основного текста
-WAITMS(RND(1001, 1200))
-KEYDOWN (#CTRL)
-WAITMS (50)
-KEYPRESS (#C)
-KEYUP (#CTRL)
-WAITMS(RND(1001, 1200))
-LCLICK(325,1068)
-WAITMS(RND(1001, 1200))
-WAITMS(RND(1001, 1200))
-KEYDOWN (#CTRL)
-WAITMS (50)
-KEYPRESS (#V)
-KEYUP (#CTRL)
-WAITMS(RND(1001, 1200))		// копирование + вставка основоного текста
-LCLICK(367,1056)			// переход в эксель
-WAITMS(RND(1001, 1200))
-LCLICK(315,1002)			// выбор 4 листа
-WAITMS(RND(1001, 1200))
-LCLICK(440,750)				// выделение картинки
-WAITMS(RND(1001, 1200))
-KEYDOWN (#CTRL)
-WAITMS (50)
-KEYPRESS (#C)
-KEYUP (#CTRL)
-WAITMS(RND(1001, 1200))
-LCLICK(325,1068)
-WAITMS(RND(1001, 1200))
-WAITMS(RND(1001, 1200))
-KEYDOWN (#CTRL)
-WAITMS (50)
-KEYPRESS (#V)
-KEYUP (#CTRL)
-WAITMS(RND(1001, 1200))		// копирование + вставка картинки
-MOVE(1158,200)
-WAITMS(500)
-WHEELDOWN
-WAITMS(500)
-WHEELDOWN
-WAITMS(500)
-WHEELDOWN
-WAITMS(500)
-WHEELDOWN
-WAITMS(RND(5001, 5200))		// прокрутка экрана
-
-GETSCREEN()
-IF_PIXEL_IN (1033,147, 1181, 1033, 12091729)
- LCLICK($_return1, $_return2)
-END_IF
-WAITMS(RND(1001, 1200))		// анализ экрана + опубликовать
-
-// начало вставки пятой новости в группу 
-LCLICK(51,172)
-WAITMS(RND(1001, 1200))
-LCLICK(797,531)
-WAITMS(RND(1001, 1200))   
-LCLICK(692,609)
-WAITMS(RND(1001, 1200))   
-LCLICK(990,536)				// устанавливаем время поста
-WAITMS(RND(1001, 1200))
-LCLICK(367,1056)			// переход в эксель
-WAITMS(RND(1001, 1200))
-LCLICK(369,1002)			// выбор 4 листа
-WAITMS(RND(1001, 1200))
-LCLICK(416,269)				// выделение заголовка 
-WAITMS(RND(1001, 1200))
-KEYDOWN (#CTRL)
-WAITMS (50)
-KEYPRESS (#C)
-KEYUP (#CTRL)
-WAITMS(RND(1001, 1200))
-LCLICK(325,1068)
-WAITMS(RND(1001, 1200))
-LCLICK(772,534)
-WAITMS(RND(1001, 1200))
-KEYDOWN (#CTRL)
-WAITMS (50)
-KEYPRESS (#V)
-KEYUP (#CTRL)
-WAITMS(RND(1001, 1200))		// копирование + вставка загловка
-KEYPRESS(#ENTER)
-WAITMS(100)
-KEYPRESS(#ENTER)
-WAITMS(RND(1001, 1200))
-LCLICK(367,1056)			// переход в эксель
-WAITMS(RND(1001, 1200))
-LCLICK(369,1002)			// выбор 5 листа
-WAITMS(RND(1001, 1200))
-LCLICK(507,408)				// выделение основного текста
-WAITMS(RND(1001, 1200))
-KEYDOWN (#CTRL)
-WAITMS (50)
-KEYPRESS (#C)
-KEYUP (#CTRL)
-WAITMS(RND(1001, 1200))
-LCLICK(325,1068)
-WAITMS(RND(1001, 1200))
-WAITMS(RND(1001, 1200))
-KEYDOWN (#CTRL)
-WAITMS (50)
-KEYPRESS (#V)
-KEYUP (#CTRL)
-WAITMS(RND(1001, 1200))		// копирование + вставка основоного текста
-LCLICK(367,1056)			// переход в эксель
-WAITMS(RND(1001, 1200))
-LCLICK(369,1002)			// выбор 5 листа
-WAITMS(RND(1001, 1200))
-LCLICK(440,750)				// выделение картинки
-WAITMS(RND(1001, 1200))
-KEYDOWN (#CTRL)
-WAITMS (50)
-KEYPRESS (#C)
-KEYUP (#CTRL)
-WAITMS(RND(1001, 1200))
-LCLICK(325,1068)
-WAITMS(RND(1001, 1200))
-WAITMS(RND(1001, 1200))
-KEYDOWN (#CTRL)
-WAITMS (50)
-KEYPRESS (#V)
-KEYUP (#CTRL)
-WAITMS(RND(1001, 1200))		// копирование + вставка картинки
-MOVE(1158,200)
-WAITMS(500)
-WHEELDOWN
-WAITMS(500)
-WHEELDOWN
-WAITMS(500)
-WHEELDOWN
-WAITMS(500)
-WHEELDOWN
-WAITMS(RND(5001, 5200))		// прокрутка экрана
-
-GETSCREEN()
-IF_PIXEL_IN (1033,147, 1181, 1033, 12091729)
- LCLICK($_return1, $_return2)
-END_IF
-WAITMS(RND(1001, 1200))		// анализ экрана + опубликовать
-
+VKGroupPost(5)
 // конец выкладования новостей в группу
 
 vkper:
+// Начало постов Дениса
 LCLICK(1412,125)
 WAITMS(RND(2001, 2200))
 LCLICK(1256,295)			// выход из профиля
@@ -459,39 +37,8 @@ LCLICK(1343,219)
 WAITMS(1500)
 LCLICK(1001,141)
 WAITMS(8500)				// заходим в профиль Дениса Клочко
-LCLICK(518,256)
-WAITMS(RND(1001, 1200))
-LCLICK(518,256)
-WAITMS(RND(10001, 10200))
-LCLICK(1277,217)
-WAITMS(10000)
 
-$var = 0
-WHILE($var < 3)
-   INC($var,1)
-   GETSCREEN()
-   WAITMS(RND(1001, 1500))
-	 IF_PIXEL_IN (642,255, 1175, 1033, 12091729)
-      LCLICK($_return1, $_return2)  
-   END_IF
-   WAITMS(RND(1001, 1500))
-END_CYC						// анализ экрана + добавить в друзья
-
-WAITMS(RND(1001, 1200))
-LCLICK(518,256)
-WAITMS(RND(2001, 2200))
-$var = 0
-WHILE($var < 5)
- INC($var,1)
- LCLICK(1320,478)     
- WAITMS(1783)
- LCLICK(1320,478)     
- WAITMS(1569)
- LCLICK(1320,478)     
- WAITMS(1931)
-END_CYC						// цикл добавления рекомендуемых друзей
-
-
+VKFriendsAdd()
 LCLICK(546,169)				// переход на "мою страницу"   
 WAITMS(RND(2001, 2200))
 WHEELDOWN
@@ -507,108 +54,9 @@ WAITMS(500)					// прокрутка экрана
 LCLICK(1100,210)     
 WAITMS(RND(1001, 1200))
 
-LCLICK(367,1056)			// переход в эксель
-WAITMS(RND(1001, 1200))
-LCLICK(129,1002)			// выбор первого листа
-WAITMS(RND(1001, 1200))
-LCLICK(416,269)				// выделение заголовка 
-WAITMS(RND(1001, 1200))
-KEYDOWN (#CTRL)
-WAITMS (50)
-KEYPRESS (#C)
-KEYUP (#CTRL)
-WAITMS(RND(1001, 1200))
-LCLICK(325,1068)
-WAITMS(RND(1001, 1200))
-LCLICK(1100,210)
-WAITMS(RND(1001, 1200))
-KEYDOWN (#CTRL)
-WAITMS (50)
-KEYPRESS (#V)
-KEYUP (#CTRL)
-WAITMS(RND(1001, 1200))     // копирование + вставка загловка
-KEYPRESS(#ENTER)
-WAITMS(100)
-KEYPRESS(#ENTER)
-WAITMS(RND(1001, 1200))
-LCLICK(367,1056)			// переход в эксель
-WAITMS(RND(1001, 1200))
-LCLICK(129,1002)			// выбор первого листа
-WAITMS(RND(1001, 1200))
-LCLICK(507,408)				// выделение основного текста
-WAITMS(RND(1001, 1200))
-KEYDOWN (#CTRL)
-WAITMS (50)
-KEYPRESS (#C)
-KEYUP (#CTRL)
-WAITMS(RND(1001, 1200))
-LCLICK(320,1056)
-WAITMS(RND(1001, 1200))       
-KEYDOWN (#CTRL)
-WAITMS (50)
-KEYPRESS (#V)
-KEYUP (#CTRL)
-WAITMS(RND(1001, 1200))		// копирование + вставка основоного текста
-LCLICK(367,1056)			// переход в эксель
-WAITMS(RND(1001, 1200))
-LCLICK(129,1002)			// выбор первого листа
-WAITMS(RND(1001, 1200))
-LCLICK(440,750)				// выделение картинки
-WAITMS(RND(1001, 1200))
-KEYDOWN (#CTRL)
-WAITMS (50)
-KEYPRESS (#C)
-KEYUP (#CTRL)
-WAITMS(RND(1001, 1200))
-LCLICK(325,1068)
-WAITMS(RND(1001, 1200))
-WAITMS(RND(1001, 1200))
-KEYDOWN (#CTRL)
-WAITMS (50)
-KEYPRESS (#V)
-KEYUP (#CTRL)
-WAITMS(RND(1001, 1200))		// копирование + вставка картинки
-WHEELDOWN
-WAITMS(500)
-WHEELDOWN
-WAITMS(RND(5001, 5200))		// прокрутка экрана
-
-GETSCREEN()
-WAITMS(RND(1001, 1200))
-IF_PIXEL_IN (1264,161, 1434, 1038, 12091729)
- LCLICK($_return1, $_return2)
-END_IF
-WAITMS(RND(1001, 1200))		// анализ экрана + опубликовать
-
-WAITMS(RND(1001, 1200))
-LCLICK(45,172)
-WAITMS(RND(3001, 3200))
-LCLICK(546,302)
-WAITMS(RND(3001, 3200))
-LCLICK(821,301)
-WAITMS(RND(3001, 3200))		// заходим в группу
-
-$var = 0
-WHILE($var < 8)
-   INC($var,1)  
-   WHEELDOWN
-   WAITMS(500)
-   WHEELDOWN
-   WAITMS(500)
-   WHEELDOWN
-   WAITMS(500)
-   WHEELDOWN
-   WAITMS(500)
-   WHEELDOWN
-   WAITMS(500)
-   WHEELDOWN
-   WAITMS(500)				// прокрутка экрана
-   GETSCREEN()
-   IF_PIXEL_IN (638,152, 685, 1034, 12959160)
-    LCLICK($_return1, $_return2)
-   END_IF
-   WAITMS(RND(1001, 1200))	// анализ экрана + опубликовать 
-END_CYC
+VKPersonalPost(1)
+VKPersonalLikesUAE()
+vklikes()
 
 // Начало постов Артема
 LCLICK(1412,125)
@@ -619,37 +67,7 @@ LCLICK(1343,219)
 WAITMS(1500)
 LCLICK(893,201)
 WAITMS(10000)				// заходим в профиль Артема
-LCLICK(518,256)
-WAITMS(RND(1001, 1200))
-LCLICK(518,256)
-WAITMS(10000)
-LCLICK(1277,217)
-WAITMS(10000)
-
-$var = 0
-WHILE($var < 3)
-   INC($var,1)
-   GETSCREEN()
-   WAITMS(RND(1001, 1500))
-	 IF_PIXEL_IN (642,255, 1175, 1033, 12091729)
-      LCLICK($_return1, $_return2)  
-   END_IF
-   WAITMS(RND(1001, 1500))
-END_CYC         // анализ экрана + добавить в друзья
-
-WAITMS(RND(1001, 1200))
-LCLICK(518,256)
-WAITMS(RND(2001, 2200))
-$var = 0
-WHILE($var < 5)
- INC($var,1)
- LCLICK(1320,478)     
- WAITMS(1783)
- LCLICK(1320,478)     
- WAITMS(1569)
- LCLICK(1320,478)     
- WAITMS(1931)
-END_CYC         // цикл добавления рекомендуемых друзей
+VKFriendsAdd()
 
 LCLICK(546,169)  // переход на "мою страницу"   
 WAITMS(RND(2001, 2200))
@@ -666,106 +84,9 @@ WAITMS(500)      // прокрутка экрана
 LCLICK(1100,210)     
 WAITMS(RND(1001, 1200))
 
-LCLICK(367,1056)  // переход в эксель
-WAITMS(RND(1001, 1200))
-LCLICK(193,1002)  // выбор 2 листа
-WAITMS(RND(1001, 1200))
-LCLICK(416,269)   // выделение заголовка 
-WAITMS(RND(1001, 1200))
-KEYDOWN (#CTRL)
-WAITMS (50)
-KEYPRESS (#C)
-KEYUP (#CTRL)
-WAITMS(RND(1001, 1200))
-LCLICK(325,1068)
-WAITMS(RND(1001, 1200))
-LCLICK(1100,210)
-WAITMS(RND(1001, 1200))
-KEYDOWN (#CTRL)
-WAITMS (50)
-KEYPRESS (#V)
-KEYUP (#CTRL)
-WAITMS(RND(1001, 1200))     // копирование + вставка загловка
-KEYPRESS(#ENTER)
-WAITMS(100)
-KEYPRESS(#ENTER)
-WAITMS(RND(1001, 1200))
-LCLICK(367,1056)  // переход в эксель
-WAITMS(RND(1001, 1200))
-LCLICK(193,1002)  // выбор 2 листа
-WAITMS(RND(1001, 1200))
-LCLICK(507,408)  // выделение основного текста
-WAITMS(RND(1001, 1200))
-KEYDOWN (#CTRL)
-WAITMS (50)
-KEYPRESS (#C)
-KEYUP (#CTRL)
-WAITMS(RND(1001, 1200))
-LCLICK(320,1056)
-WAITMS(RND(1001, 1200))       
-KEYDOWN (#CTRL)
-WAITMS (50)
-KEYPRESS (#V)
-KEYUP (#CTRL)
-WAITMS(RND(1001, 1200))      // копирование + вставка основоного текста
-LCLICK(367,1056)  // переход в эксель
-WAITMS(RND(1001, 1200))
-LCLICK(193,1002)  // выбор 2 листа
-WAITMS(RND(1001, 1200))
-LCLICK(440,750)   // выделение картинки
-WAITMS(RND(1001, 1200))
-KEYDOWN (#CTRL)
-WAITMS (50)
-KEYPRESS (#C)
-KEYUP (#CTRL)
-WAITMS(RND(1001, 1200))
-LCLICK(325,1068)
-WAITMS(RND(1001, 1200))
-WAITMS(RND(1001, 1200))
-KEYDOWN (#CTRL)
-WAITMS (50)
-KEYPRESS (#V)
-KEYUP (#CTRL)
-WAITMS(RND(1001, 1200))     // копирование + вставка картинки
-WHEELDOWN
-WAITMS(500)
-WHEELDOWN
-WAITMS(RND(5001, 5200))       // прокрутка экрана
-
-GETSCREEN()
-IF_PIXEL_IN (1264,161, 1434, 1038, 12091729)
- LCLICK($_return1, $_return2)
-END_IF
-WAITMS(RND(1001, 1200))     // анализ экрана + опубликовать
-
-WAITMS(RND(1001, 1200))
-LCLICK(45,172)
-WAITMS(RND(3001, 3200))
-LCLICK(546,302)
-WAITMS(RND(3001, 3200))
-LCLICK(821,301)
-WAITMS(RND(3001, 3200))     // заходим в группу
-$var = 0
-WHILE($var < 8)
-   INC($var,1)  
-   WHEELDOWN
-   WAITMS(500)
-   WHEELDOWN
-   WAITMS(500)
-   WHEELDOWN
-   WAITMS(500)
-   WHEELDOWN
-   WAITMS(500)
-   WHEELDOWN
-   WAITMS(500)
-   WHEELDOWN
-   WAITMS(500)      // прокрутка экрана
-   GETSCREEN()
-   IF_PIXEL_IN (638,152, 685, 1034, 12959160)
-    LCLICK($_return1, $_return2)
-   END_IF
-   WAITMS(RND(1001, 1200))     // анализ экрана + опубликовать 
-END_CYC
+VKPersonalPost(2)
+VKPersonalLikesUAE()
+vklikes()
 
 // начало постов Ерика
 LCLICK(1412,125)
@@ -776,38 +97,7 @@ LCLICK(1343,219)
 WAITMS(1500)
 LCLICK(960,250)
 WAITMS(10000)      // заходим в профиль Ерика
-LCLICK(518,256)
-WAITMS(RND(1001, 1200))
-LCLICK(518,256)
-WAITMS(10000)
-LCLICK(1277,217)
-WAITMS(10000)
-
-$var = 0
-WHILE($var < 3)
-   INC($var,1)
-   GETSCREEN()
-   WAITMS(RND(1001, 1500))
-	 IF_PIXEL_IN (642,255, 1175, 1033, 12091729)
-      LCLICK($_return1, $_return2)  
-   END_IF
-   WAITMS(RND(1001, 1500))
-END_CYC         // анализ экрана + добавить в друзья
-
-WAITMS(RND(1001, 1200))
-LCLICK(518,256)
-WAITMS(RND(2001, 2200))
-$var = 0
-WHILE($var < 5)
- INC($var,1)
- LCLICK(1320,478)     
- WAITMS(1783)
- LCLICK(1320,478)     
- WAITMS(1569)
- LCLICK(1320,478)     
- WAITMS(1931)
-END_CYC         // цикл добавления рекомендуемых друзей
-
+VKFriendsAdd()
 LCLICK(546,169)  // переход на "мою страницу"   
 WAITMS(RND(2001, 2200))
 WHEELDOWN
@@ -822,108 +112,9 @@ WHEELDOWN
 WAITMS(500)      // прокрутка экрана
 LCLICK(1100,210)     
 WAITMS(RND(1001, 1200))
-
-LCLICK(367,1056)  // переход в эксель
-WAITMS(RND(1001, 1200))
-LCLICK(250,1002)  // выбор 3 листа
-WAITMS(RND(1001, 1200))
-LCLICK(416,269)   // выделение заголовка 
-WAITMS(RND(1001, 1200))
-KEYDOWN (#CTRL)
-WAITMS (50)
-KEYPRESS (#C)
-KEYUP (#CTRL)
-WAITMS(RND(1001, 1200))
-LCLICK(325,1068)
-WAITMS(RND(1001, 1200))
-LCLICK(1100,210)
-WAITMS(RND(1001, 1200))
-KEYDOWN (#CTRL)
-WAITMS (50)
-KEYPRESS (#V)
-KEYUP (#CTRL)
-WAITMS(RND(1001, 1200))     // копирование + вставка загловка
-KEYPRESS(#ENTER)
-WAITMS(100)
-KEYPRESS(#ENTER)
-WAITMS(RND(1001, 1200))
-LCLICK(367,1056)  // переход в эксель
-WAITMS(RND(1001, 1200))
-LCLICK(250,1002)  // выбор 3 листа
-WAITMS(RND(1001, 1200))
-LCLICK(507,408)  // выделение основного текста
-WAITMS(RND(1001, 1200))
-KEYDOWN (#CTRL)
-WAITMS (50)
-KEYPRESS (#C)
-KEYUP (#CTRL)
-WAITMS(RND(1001, 1200))
-LCLICK(320,1056)
-WAITMS(RND(1001, 1200))       
-KEYDOWN (#CTRL)
-WAITMS (50)
-KEYPRESS (#V)
-KEYUP (#CTRL)
-WAITMS(RND(1001, 1200))      // копирование + вставка основоного текста
-LCLICK(367,1056)  // переход в эксель
-WAITMS(RND(1001, 1200))
-LCLICK(250,1002)  // выбор 3 листа
-WAITMS(RND(1001, 1200))
-LCLICK(440,750)   // выделение картинки
-WAITMS(RND(1001, 1200))
-KEYDOWN (#CTRL)
-WAITMS (50)
-KEYPRESS (#C)
-KEYUP (#CTRL)
-WAITMS(RND(1001, 1200))
-LCLICK(325,1068)
-WAITMS(RND(1001, 1200))
-WAITMS(RND(1001, 1200))
-KEYDOWN (#CTRL)
-WAITMS (50)
-KEYPRESS (#V)
-KEYUP (#CTRL)
-WAITMS(RND(1001, 1200))     // копирование + вставка картинки
-WHEELDOWN
-WAITMS(500)
-WHEELDOWN
-WAITMS(RND(5001, 5200))       // прокрутка экрана
-
-GETSCREEN()
-IF_PIXEL_IN (1264,161, 1434, 1038, 12091729)
- LCLICK($_return1, $_return2)
-END_IF
-WAITMS(RND(1001, 1200))     // анализ экрана + опубликовать
-
-WAITMS(RND(1001, 1200))
-LCLICK(45,172)
-WAITMS(RND(3001, 3200))
-LCLICK(546,302)
-WAITMS(RND(3001, 3200))
-LCLICK(821,301)
-WAITMS(RND(3001, 3200))     // заходим в группу
-$var = 0
-WHILE($var < 8)
-   INC($var,1)  
-   WHEELDOWN
-   WAITMS(500)
-   WHEELDOWN
-   WAITMS(500)
-   WHEELDOWN
-   WAITMS(500)
-   WHEELDOWN
-   WAITMS(500)
-   WHEELDOWN
-   WAITMS(500)
-   WHEELDOWN
-   WAITMS(500)      // прокрутка экрана
-   GETSCREEN()
-   IF_PIXEL_IN (638,152, 685, 1034, 12959160)
-    LCLICK($_return1, $_return2)
-   END_IF
-   WAITMS(RND(1001, 1200))     // анализ экрана + лайк
-END_CYC
-
+VKPersonalPost(3)
+VKPersonalLikesUAE()
+vklikes()
 
 // начало постов Рахима
 LCLICK(1412,125)
@@ -934,37 +125,7 @@ LCLICK(1343,219)
 WAITMS(1500)
 LCLICK(960,294)
 WAITMS(10000)      // заходим в профиль Рахима
-LCLICK(518,256)
-WAITMS(RND(1001, 1200))
-LCLICK(518,256)
-WAITMS(10000)
-LCLICK(1277,217)
-WAITMS(10000)
-
-$var = 0
-WHILE($var < 3)
-   INC($var,1)
-   GETSCREEN()
-   WAITMS(RND(1001, 1500))
-	 IF_PIXEL_IN (642,255, 1175, 1033, 12091729)
-      LCLICK($_return1, $_return2)  
-   END_IF
-   WAITMS(RND(1001, 1500))
-END_CYC         // анализ экрана + добавить в друзья
-
-WAITMS(RND(1001, 1200))
-LCLICK(518,256)
-WAITMS(RND(2001, 2200))
-$var = 0
-WHILE($var < 5)
- INC($var,1)
- LCLICK(1320,478)     
- WAITMS(1783)
- LCLICK(1320,478)     
- WAITMS(1569)
- LCLICK(1320,478)     
- WAITMS(1931)
-END_CYC         // цикл добавления рекомендуемых друзей
+VKFriendsAdd()
 
 LCLICK(546,169)  // переход на "мою страницу"   
 WAITMS(RND(2001, 2200))
@@ -981,106 +142,9 @@ WAITMS(500)      // прокрутка экрана
 LCLICK(1100,210)     
 WAITMS(RND(1001, 1200))
 
-LCLICK(367,1056)  // переход в эксель
-WAITMS(RND(1001, 1200))
-LCLICK(310,1002)  // выбор 4 листа
-WAITMS(RND(1001, 1200))
-LCLICK(416,269)   // выделение заголовка 
-WAITMS(RND(1001, 1200))
-KEYDOWN (#CTRL)
-WAITMS (50)
-KEYPRESS (#C)
-KEYUP (#CTRL)
-WAITMS(RND(1001, 1200))
-LCLICK(325,1068)
-WAITMS(RND(1001, 1200))
-LCLICK(1100,210)
-WAITMS(RND(1001, 1200))
-KEYDOWN (#CTRL)
-WAITMS (50)
-KEYPRESS (#V)
-KEYUP (#CTRL)
-WAITMS(RND(1001, 1200))     // копирование + вставка загловка
-KEYPRESS(#ENTER)
-WAITMS(100)
-KEYPRESS(#ENTER)
-WAITMS(RND(1001, 1200))
-LCLICK(367,1056)  // переход в эксель
-WAITMS(RND(1001, 1200))
-LCLICK(310,1002)  // выбор 4 листа
-WAITMS(RND(1001, 1200))
-LCLICK(507,408)  // выделение основного текста
-WAITMS(RND(1001, 1200))
-KEYDOWN (#CTRL)
-WAITMS (50)
-KEYPRESS (#C)
-KEYUP (#CTRL)
-WAITMS(RND(1001, 1200))
-LCLICK(320,1056)
-WAITMS(RND(1001, 1200))       
-KEYDOWN (#CTRL)
-WAITMS (50)
-KEYPRESS (#V)
-KEYUP (#CTRL)
-WAITMS(RND(1001, 1200))      // копирование + вставка основоного текста
-LCLICK(367,1056)  // переход в эксель
-WAITMS(RND(1001, 1200))
-LCLICK(310,1002)  // выбор 4 листа
-WAITMS(RND(1001, 1200))
-LCLICK(440,750)   // выделение картинки
-WAITMS(RND(1001, 1200))
-KEYDOWN (#CTRL)
-WAITMS (50)
-KEYPRESS (#C)
-KEYUP (#CTRL)
-WAITMS(RND(1001, 1200))
-LCLICK(325,1068)
-WAITMS(RND(1001, 1200))
-WAITMS(RND(1001, 1200))
-KEYDOWN (#CTRL)
-WAITMS (50)
-KEYPRESS (#V)
-KEYUP (#CTRL)
-WAITMS(RND(1001, 1200))     // копирование + вставка картинки
-WHEELDOWN
-WAITMS(500)
-WHEELDOWN
-WAITMS(RND(5001, 5200))       // прокрутка экрана
-
-GETSCREEN()
-IF_PIXEL_IN (1264,161, 1434, 1038, 12091729)
- LCLICK($_return1, $_return2)
-END_IF
-WAITMS(RND(1001, 1200))     // анализ экрана + опубликовать
-
-WAITMS(RND(1001, 1200))
-LCLICK(45,172)
-WAITMS(RND(3001, 3200))
-LCLICK(546,302)
-WAITMS(RND(3001, 3200))
-LCLICK(821,301)
-WAITMS(RND(3001, 3200))     // заходим в группу
-$var = 0
-WHILE($var < 8)
-   INC($var,1)  
-   WHEELDOWN
-   WAITMS(500)
-   WHEELDOWN
-   WAITMS(500)
-   WHEELDOWN
-   WAITMS(500)
-   WHEELDOWN
-   WAITMS(500)
-   WHEELDOWN
-   WAITMS(500)
-   WHEELDOWN
-   WAITMS(500)      // прокрутка экрана
-   GETSCREEN()
-   IF_PIXEL_IN (638,152, 685, 1034, 12959160)
-    LCLICK($_return1, $_return2)
-   END_IF
-   WAITMS(RND(1001, 1200))     // анализ экрана + лайк
-END_CYC
+VKPersonalPost(4)
+VKPersonalLikesUAE()
+vklikes()
 
 // начало постов Медета
 LCLICK(1412,125)
@@ -1095,37 +159,7 @@ WHEELDOWN
 WAITMS(1500)
 LCLICK(980,161)
 WAITMS(10000)      // заходим в профиль Рахима
-LCLICK(518,256)
-WAITMS(RND(1001, 1200))
-LCLICK(518,256)
-WAITMS(10000)
-LCLICK(1277,217)
-WAITMS(10000)
-
-$var = 0
-WHILE($var < 3)
-   INC($var,1)
-   GETSCREEN()
-   WAITMS(RND(1001, 1500))
-	 IF_PIXEL_IN (642,255, 1175, 1033, 12091729)
-      LCLICK($_return1, $_return2)  
-   END_IF
-   WAITMS(RND(1001, 1500))
-END_CYC         // анализ экрана + добавить в друзья
-
-WAITMS(RND(1001, 1200))
-LCLICK(518,256)
-WAITMS(RND(2001, 2200))
-$var = 0
-WHILE($var < 5)
- INC($var,1)
- LCLICK(1320,478)     
- WAITMS(1783)
- LCLICK(1320,478)     
- WAITMS(1569)
- LCLICK(1320,478)     
- WAITMS(1931)
-END_CYC         // цикл добавления рекомендуемых друзей
+VKFriendsAdd()
 
 LCLICK(546,169)  // переход на "мою страницу"   
 WAITMS(RND(2001, 2200))
@@ -1142,124 +176,29 @@ WAITMS(500)      // прокрутка экрана
 LCLICK(1100,210)     
 WAITMS(RND(1001, 1200))
 
-LCLICK(367,1056)  // переход в эксель
-WAITMS(RND(1001, 1200))
-LCLICK(370,1002)  // выбор 5 листа
-WAITMS(RND(1001, 1200))
-LCLICK(416,269)   // выделение заголовка 
-WAITMS(RND(1001, 1200))
-KEYDOWN (#CTRL)
-WAITMS (50)
-KEYPRESS (#C)
-KEYUP (#CTRL)
-WAITMS(RND(1001, 1200))
-LCLICK(325,1068)
-WAITMS(RND(1001, 1200))
-LCLICK(1100,210)
-WAITMS(RND(1001, 1200))
-KEYDOWN (#CTRL)
-WAITMS (50)
-KEYPRESS (#V)
-KEYUP (#CTRL)
-WAITMS(RND(1001, 1200))     // копирование + вставка загловка
-KEYPRESS(#ENTER)
-WAITMS(100)
-KEYPRESS(#ENTER)
-WAITMS(RND(1001, 1200))
-LCLICK(367,1056)  // переход в эксель
-WAITMS(RND(1001, 1200))
-LCLICK(370,1002)  // выбор 5 листа
-WAITMS(RND(1001, 1200))
-LCLICK(507,408)  // выделение основного текста
-WAITMS(RND(1001, 1200))
-KEYDOWN (#CTRL)
-WAITMS (50)
-KEYPRESS (#C)
-KEYUP (#CTRL)
-WAITMS(RND(1001, 1200))
-LCLICK(320,1056)
-WAITMS(RND(1001, 1200))       
-KEYDOWN (#CTRL)
-WAITMS (50)
-KEYPRESS (#V)
-KEYUP (#CTRL)
-WAITMS(RND(1001, 1200))      // копирование + вставка основоного текста
-LCLICK(367,1056)  // переход в эксель
-WAITMS(RND(1001, 1200))
-LCLICK(370,1002)  // выбор 5 листа
-WAITMS(RND(1001, 1200))
-LCLICK(440,750)   // выделение картинки
-WAITMS(RND(1001, 1200))
-KEYDOWN (#CTRL)
-WAITMS (50)
-KEYPRESS (#C)
-KEYUP (#CTRL)
-WAITMS(RND(1001, 1200))
-LCLICK(325,1068)
-WAITMS(RND(1001, 1200))
-WAITMS(RND(1001, 1200))
-KEYDOWN (#CTRL)
-WAITMS (50)
-KEYPRESS (#V)
-KEYUP (#CTRL)
-WAITMS(RND(1001, 1200))     // копирование + вставка картинки
-WHEELDOWN
-WAITMS(500)
-WHEELDOWN
-WAITMS(RND(5001, 5200))       // прокрутка экрана
+VKPersonalPost(5)
+VKPersonalLikesUAE()
+vklikes()
 
-GETSCREEN()
-WAITMS(RND(1001, 1200))
-IF_PIXEL_IN (1264,161, 1434, 1038, 12091729)
- LCLICK($_return1, $_return2)
-END_IF
-WAITMS(RND(1001, 1200))     // анализ экрана + опубликовать
-
-WAITMS(RND(1001, 1200))
-LCLICK(45,172)
-WAITMS(RND(3001, 3200))
-LCLICK(546,302)
-WAITMS(RND(3001, 3200))
-LCLICK(821,301)
-WAITMS(RND(3001, 3200))     // заходим в группу
-$var = 0
-WHILE($var < 8)
-   INC($var,1)  
-   WHEELDOWN
-   WAITMS(500)
-   WHEELDOWN
-   WAITMS(500)
-   WHEELDOWN
-   WAITMS(500)
-   WHEELDOWN
-   WAITMS(500)
-   WHEELDOWN
-   WAITMS(500)
-   WHEELDOWN
-   WAITMS(500)      // прокрутка экрана
-   GETSCREEN()
-   IF_PIXEL_IN (638,152, 685, 1034, 12959160)
-    LCLICK($_return1, $_return2)
-   END_IF
-   WAITMS(RND(1001, 1200))     // анализ экрана + лайк
-END_CYC
-
+WAITMS(RND(1501, 1700))
 LCLICK(266,11)
-WAITMS(RND(1001, 1200))
+WAITMS(RND(1501, 1700))
 LCLICK(959,654)
-WAITMS(RND(1001, 1200))
+WAITMS(RND(1501, 1700))
 LCLICK(233,19)     // выходим из вк и включаем ФБ
-
+WAITMS(RND(2001, 2500))
+vklikes()
 
 fbper:
+WAITMS(RND(2001, 2500))
 LCLICK(812,426)
-WAITMS(RND(1001, 1200))
+WAITMS(RND(1501, 1700))
 LCLICK(372,1067)  
-WAITMS(RND(1001, 1200))
+WAITMS(RND(1501, 1700))
 LCLICK(131,1008)  
-WAITMS(RND(1001, 1200))
+WAITMS(RND(1501, 1700))
 LCLICK(285,286)  
-WAITMS(RND(1001, 1200))
+WAITMS(RND(1501, 1700))
 LCLICK(416,269)   // выделение заголовка 
 WAITMS(RND(1001, 1200))
 KEYDOWN (#CTRL)
@@ -1401,7 +340,7 @@ WAITMS(5000)     // анализ экрана + опубликовать
 
 LCLICK(156,296)  // начало добавления в друзья
 $var = 0
-WHILE($var < 25)
+WHILE($var < 40)
    INC($var,1)
    WHEELDOWN
    WAITMS(RND(350, 600))
