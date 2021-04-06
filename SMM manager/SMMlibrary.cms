@@ -287,9 +287,21 @@ SUB(VKPersonalPost, $post)
 	   LCLICK(315,1002)    // выбор 4 листа
 	case(5)
 	   LCLICK(369,1002)    // выбор 5 листа
+   case(6)
+      LCLICK(428,1002)     // выбор 6 листа
+   case(7)
+      LCLICK(492,1002)     // выбор 7 листа
+   case(8)
+      LCLICK(550,1002)     // выбор 8 листа
+   case(9)
+	   LCLICK(612,1002)    // выбор 9 листа
+	case(10)
+	   LCLICK(662,1002)    // выбор 10 листа
    default
       LCLICK(129,1002)     // выбор 1 листа
    end_switch   
+   
+   WAITMS(RND(1001, 1200))
    LCLICK(416,269)				// выделение заголовка 
    WAITMS(RND(1001, 1200))
    KEYDOWN (#CTRL)
@@ -387,4 +399,150 @@ SUB(VKPersonalLikesUAE)
    END_CYC
 END_SUB
 
+SUB(VKscroll)
+   WAITMS(RND(2001, 2200))
+   WHEELDOWN
+   WAITMS(500)
+   WHEELDOWN
+   WAITMS(500)
+   WHEELDOWN
+   WAITMS(500)
+   WHEELDOWN
+   WAITMS(500)
+   WHEELDOWN
+   WAITMS(500)					// прокрутка экрана
+   LCLICK(1100,210)     
+   WAITMS(RND(1001, 1200))
+END_SUB
+
+SUB(IGSubscribe)
+   $var = 0
+   WHILE($var < 15)
+      INC($var,1)
+      WAITMS(RND(2001, 2200))
+      GETSCREEN(1120, 211, 1257, 1005)
+      IF_PIXEL_IN (1120, 211, 1257, 1005, 16160000)
+         LCLICK($_return1, $_return2)
+      WAITMS(RND(1001, 1200))
+      END_IF
+   END_CYC         // Подписка
+END_SUB
+
+SUB(IGScroll)
+   $var = 0
+   WHILE($var < 10)
+      INC($var,1)
+      WHEELDOWN
+      WAITMS(RND(1001, 1200))
+   END_CYC        // прокрутка 
+END_SUB
+
+SUB(FBPersonalPost, $post)
+   WAITMS(RND(1501, 1700))
+   LCLICK(372,1067)   // переход в эксель
+   WAITMS(RND(1501, 1700))
+   switch($post)
+   case(1)
+      LCLICK(129,1002)     // выбор 1 листа
+   case(2)
+      LCLICK(195,1002)     // выбор 2 листа
+   case(3)
+      LCLICK(251,1002)     // выбор 3 листа
+   case(4)
+	   LCLICK(315,1002)    // выбор 4 листа
+	case(5)
+	   LCLICK(369,1002)    // выбор 5 листа
+   case(6)
+      LCLICK(428,1002)     // выбор 6 листа
+   case(7)
+      LCLICK(492,1002)     // выбор 7 листа
+   case(8)
+      LCLICK(550,1002)     // выбор 8 листа
+   case(9)
+	   LCLICK(612,1002)    // выбор 9 листа
+	case(10)
+	   LCLICK(662,1002)    // выбор 10 листа
+   default
+      LCLICK(129,1002)     // выбор 1 листа
+   end_switch   
+   WAITMS(RND(1501, 1700))
+   LCLICK(416,269)   // выделение заголовка 
+   WAITMS(RND(1001, 1200))
+   KEYDOWN (#CTRL)
+   WAITMS (50)
+   KEYPRESS (#C)
+   KEYUP (#CTRL)
+   WAITMS(RND(1001, 1200))
+   LCLICK(308,1057) 
+   WAITMS(RND(1001, 1200))
+   LCLICK(823,486) 
+   WAITMS(RND(1001, 1200))
+   LCLICK(784,491)
+   WAITMS(RND(1001, 1200))
+   KEYDOWN (#CTRL)
+   WAITMS (50)
+   KEYPRESS (#V)
+   KEYUP (#CTRL)
+   WAITMS(RND(1001, 1200))      // копирование + вставка загловка
+   KEYPRESS(#ENTER)
+   WAITMS(100)
+   KEYPRESS(#ENTER)
+   WAITMS(RND(1001, 1200))
+   LCLICK(367,1056)  // переход в эксель
+   WAITMS(RND(1001, 1200))
+   LCLICK(507,408)  // выделение основного текста
+   WAITMS(RND(1001, 1200))
+   KEYDOWN (#CTRL)
+   WAITMS (50)
+   KEYPRESS (#C)
+   KEYUP (#CTRL)
+   WAITMS(RND(1001, 1200))
+   LCLICK(320,1056)
+   WAITMS(RND(1001, 1200))       
+   KEYDOWN (#CTRL)
+   WAITMS (50)
+   KEYPRESS (#V)
+   KEYUP (#CTRL)
+   WAITMS(RND(1001, 1200))      // копирование + вставка основоного текста
+   LCLICK(367,1056)  // переход в эксель
+   WAITMS(RND(1001, 1200))
+   LCLICK(99,509)   // выделение картинки
+   WAITMS(RND(1001, 1200))
+   KEYDOWN (#CTRL)
+   WAITMS (50)
+   KEYPRESS (#C)
+   KEYUP (#CTRL)
+   WAITMS(RND(1001, 1200))
+   LCLICK(325,1068)
+   WAITMS(RND(1001, 1200))
+   WAITMS(RND(1001, 1200))
+   KEYDOWN (#CTRL)
+   WAITMS (50)
+   KEYPRESS (#V)
+   KEYUP (#CTRL)
+   WAITMS(RND(5001, 5200))      // копирование + вставка картинки
+
+   GETSCREEN(490, 120, 935, 1028)
+   IF_PIXEL_IN (490, 120, 935, 1028, 15890200)
+   LCLICK($_return1, $_return2)
+   END_IF
+   WAITMS(5000)     // анализ экрана + опубликовать
+END_SUB
+
+
+SUB(FBFriendsAdd)
+   LCLICK(156,296)  // начало добавления в друзья
+   WAITMS(RND(1350, 1600))
+   $var = 0
+   WHILE($var < 40)
+      INC($var,1)
+      WHEELDOWN
+      WAITMS(RND(350, 600))
+      GETSCREEN(10, 247, 336, 1028)
+      WAITMS(RND(350, 600))
+      IF_PIXEL_IN (10, 247, 336, 1028, 15890200)
+         LCLICK($_return1, $_return2)
+      END_IF 
+   END_CYC         // конец добавления в друзья
+END_SUB
 

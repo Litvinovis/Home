@@ -4,8 +4,7 @@ DEFINE($var, 0)
 DEFINE($var2, 0)
 DEFINE($post, 0)
 
-// начало выкладования новостей в группу
-LCLICK(546,302)
+LCLICK(546,302)           // начало выкладования новостей в группу
 WAITMS(RND(1501, 1700))
 LCLICK(844,183)
 WAITMS(RND(2501, 2900))
@@ -14,8 +13,6 @@ WAITMS(RND(2501, 2900))
 LCLICK(797,531)
 WAITMS(RND(2501, 2900))   
 LCLICK(692,609)
-WAITMS(RND(1001, 1200))   
-LCLICK(990,536)				// устанавливаем время поста
 VKGroupPost(1)
 LCLICK(51,172)        // возврат наверх страницы
 VKGroupPost(2)
@@ -24,10 +21,9 @@ VKGroupPost(3)
 LCLICK(51,172)
 VKGroupPost(4)
 LCLICK(51,172)
-VKGroupPost(5)
-// конец выкладования новостей в группу
+VKGroupPost(5)       // конец выкладования новостей в группу
 
-vkper:
+vkper:             
 // Начало постов Дениса
 LCLICK(1412,125)
 WAITMS(RND(2001, 2200))
@@ -37,24 +33,13 @@ LCLICK(1343,219)
 WAITMS(1500)
 LCLICK(1001,141)
 WAITMS(8500)				// заходим в профиль Дениса Клочко
-
 VKFriendsAdd()
 LCLICK(546,169)				// переход на "мою страницу"   
-WAITMS(RND(2001, 2200))
-WHEELDOWN
-WAITMS(500)
-WHEELDOWN
-WAITMS(500)
-WHEELDOWN
-WAITMS(500)
-WHEELDOWN
-WAITMS(500)
-WHEELDOWN
-WAITMS(500)					// прокрутка экрана
-LCLICK(1100,210)     
-WAITMS(RND(1001, 1200))
-
+VKscroll()
 VKPersonalPost(1)
+LCLICK(82,287)  // переход наверх страницы
+VKscroll()
+VKPersonalPost(6)
 VKPersonalLikesUAE()
 vklikes()
 
@@ -68,23 +53,13 @@ WAITMS(1500)
 LCLICK(893,201)
 WAITMS(10000)				// заходим в профиль Артема
 VKFriendsAdd()
-
 LCLICK(546,169)  // переход на "мою страницу"   
-WAITMS(RND(2001, 2200))
-WHEELDOWN
-WAITMS(500)
-WHEELDOWN
-WAITMS(500)
-WHEELDOWN
-WAITMS(500)
-WHEELDOWN
-WAITMS(500)
-WHEELDOWN
-WAITMS(500)      // прокрутка экрана
-LCLICK(1100,210)     
+VKscroll() 
 WAITMS(RND(1001, 1200))
-
 VKPersonalPost(2)
+LCLICK(82,287)  // переход наверх страницы
+VKscroll()
+VKPersonalPost(7)
 VKPersonalLikesUAE()
 vklikes()
 
@@ -99,20 +74,11 @@ LCLICK(960,250)
 WAITMS(10000)      // заходим в профиль Ерика
 VKFriendsAdd()
 LCLICK(546,169)  // переход на "мою страницу"   
-WAITMS(RND(2001, 2200))
-WHEELDOWN
-WAITMS(500)
-WHEELDOWN
-WAITMS(500)
-WHEELDOWN
-WAITMS(500)
-WHEELDOWN
-WAITMS(500)
-WHEELDOWN
-WAITMS(500)      // прокрутка экрана
-LCLICK(1100,210)     
-WAITMS(RND(1001, 1200))
+VKscroll()
 VKPersonalPost(3)
+LCLICK(82,287)  // переход наверх страницы
+VKscroll()
+VKPersonalPost(8)
 VKPersonalLikesUAE()
 vklikes()
 
@@ -126,23 +92,12 @@ WAITMS(1500)
 LCLICK(960,294)
 WAITMS(10000)      // заходим в профиль Рахима
 VKFriendsAdd()
-
 LCLICK(546,169)  // переход на "мою страницу"   
-WAITMS(RND(2001, 2200))
-WHEELDOWN
-WAITMS(500)
-WHEELDOWN
-WAITMS(500)
-WHEELDOWN
-WAITMS(500)
-WHEELDOWN
-WAITMS(500)
-WHEELDOWN
-WAITMS(500)      // прокрутка экрана
-LCLICK(1100,210)     
-WAITMS(RND(1001, 1200))
-
+VKscroll()
 VKPersonalPost(4)
+LCLICK(82,287)  // переход наверх страницы
+VKscroll()
+VKPersonalPost(9)
 VKPersonalLikesUAE()
 vklikes()
 
@@ -160,23 +115,12 @@ WAITMS(1500)
 LCLICK(980,161)
 WAITMS(10000)      // заходим в профиль Рахима
 VKFriendsAdd()
-
 LCLICK(546,169)  // переход на "мою страницу"   
-WAITMS(RND(2001, 2200))
-WHEELDOWN
-WAITMS(500)
-WHEELDOWN
-WAITMS(500)
-WHEELDOWN
-WAITMS(500)
-WHEELDOWN
-WAITMS(500)
-WHEELDOWN
-WAITMS(500)      // прокрутка экрана
-LCLICK(1100,210)     
-WAITMS(RND(1001, 1200))
-
+VKscroll()
 VKPersonalPost(5)
+LCLICK(82,287)  // переход наверх страницы
+VKscroll()
+VKPersonalPost(10)
 VKPersonalLikesUAE()
 vklikes()
 
@@ -187,176 +131,23 @@ LCLICK(959,654)
 WAITMS(RND(1501, 1700))
 LCLICK(233,19)     // выходим из вк и включаем ФБ
 WAITMS(RND(2001, 2500))
-vklikes()
+SOUND(VK.wav)
 
 fbper:
 WAITMS(RND(2001, 2500))
 LCLICK(812,426)
-WAITMS(RND(1501, 1700))
-LCLICK(372,1067)  
-WAITMS(RND(1501, 1700))
-LCLICK(131,1008)  
-WAITMS(RND(1501, 1700))
-LCLICK(285,286)  
-WAITMS(RND(1501, 1700))
-LCLICK(416,269)   // выделение заголовка 
-WAITMS(RND(1001, 1200))
-KEYDOWN (#CTRL)
-WAITMS (50)
-KEYPRESS (#C)
-KEYUP (#CTRL)
-WAITMS(RND(1001, 1200))
-LCLICK(308,1057) 
-WAITMS(RND(1001, 1200))
-LCLICK(823,486) 
-WAITMS(RND(1001, 1200))
-LCLICK(784,491)
-WAITMS(RND(1001, 1200))
-KEYDOWN (#CTRL)
-WAITMS (50)
-KEYPRESS (#V)
-KEYUP (#CTRL)
-WAITMS(RND(1001, 1200))      // копирование + вставка загловка
-KEYPRESS(#ENTER)
-WAITMS(100)
-KEYPRESS(#ENTER)
-WAITMS(RND(1001, 1200))
-LCLICK(367,1056)  // переход в эксель
-WAITMS(RND(1001, 1200))
-LCLICK(128,1002)  // выбор 1 листа
-WAITMS(RND(1001, 1200))
-LCLICK(507,408)  // выделение основного текста
-WAITMS(RND(1001, 1200))
-KEYDOWN (#CTRL)
-WAITMS (50)
-KEYPRESS (#C)
-KEYUP (#CTRL)
-WAITMS(RND(1001, 1200))
-LCLICK(320,1056)
-WAITMS(RND(1001, 1200))       
-KEYDOWN (#CTRL)
-WAITMS (50)
-KEYPRESS (#V)
-KEYUP (#CTRL)
-WAITMS(RND(1001, 1200))      // копирование + вставка основоного текста
-LCLICK(367,1056)  // переход в эксель
-WAITMS(RND(1001, 1200))
-LCLICK(128,1002)  // выбор 1 листа
-WAITMS(RND(1001, 1200))
-LCLICK(440,750)   // выделение картинки
-WAITMS(RND(1001, 1200))
-KEYDOWN (#CTRL)
-WAITMS (50)
-KEYPRESS (#C)
-KEYUP (#CTRL)
-WAITMS(RND(1001, 1200))
-LCLICK(325,1068)
-WAITMS(RND(1001, 1200))
-WAITMS(RND(1001, 1200))
-KEYDOWN (#CTRL)
-WAITMS (50)
-KEYPRESS (#V)
-KEYUP (#CTRL)
-WAITMS(RND(5001, 5200))      // копирование + вставка картинки
-
-
-GETSCREEN(490, 120, 935, 1028)
-IF_PIXEL_IN (490, 120, 935, 1028, 15890200)
- LCLICK($_return1, $_return2)
-END_IF
-WAITMS(5000)     // анализ экрана + опубликовать
-
+FBPersonalPost(1)
 LCLICK(812,426)
+FBPersonalPost(6)
+FBFriendsAdd()
 WAITMS(RND(1001, 1200))
-LCLICK(372,1067)  
-WAITMS(RND(1001, 1200))
-LCLICK(190,1004)  
-WAITMS(RND(1001, 1200))
-LCLICK(285,286)  
-WAITMS(RND(1001, 1200))
-LCLICK(416,269)   // выделение заголовка 
-WAITMS(RND(1001, 1200))
-KEYDOWN (#CTRL)
-WAITMS (50)
-KEYPRESS (#C)
-KEYUP (#CTRL)
-WAITMS(RND(1001, 1200))
-LCLICK(308,1057)  
-WAITMS(RND(1001, 1200))
-LCLICK(784,491)
-WAITMS(RND(1001, 1200))
-KEYDOWN (#CTRL)
-WAITMS (50)
-KEYPRESS (#V)
-KEYUP (#CTRL)
-WAITMS(RND(1001, 1200))      // копирование + вставка загловка
-KEYPRESS(#ENTER)
-WAITMS(100)
-KEYPRESS(#ENTER)
-WAITMS(RND(1001, 1200))
-LCLICK(367,1056)  // переход в эксель
-WAITMS(RND(1001, 1200))
-LCLICK(190,1002)  // выбор 2 листа
-WAITMS(RND(1001, 1200))
-LCLICK(507,408)  // выделение основного текста
-WAITMS(RND(1001, 1200))
-KEYDOWN (#CTRL)
-WAITMS (50)
-KEYPRESS (#C)
-KEYUP (#CTRL)
-WAITMS(RND(1001, 1200))
-LCLICK(320,1056)
-WAITMS(RND(1001, 1200))       
-KEYDOWN (#CTRL)
-WAITMS (50)
-KEYPRESS (#V)
-KEYUP (#CTRL)
-WAITMS(RND(1001, 1200))      // копирование + вставка основоного текста
-LCLICK(367,1056)  // переход в эксель
-WAITMS(RND(1001, 1200))
-LCLICK(190,1002)  // выбор 2 листа
-WAITMS(RND(1001, 1200))
-LCLICK(440,750)   // выделение картинки
-WAITMS(RND(1001, 1200))
-KEYDOWN (#CTRL)
-WAITMS (50)
-KEYPRESS (#C)
-KEYUP (#CTRL)
-WAITMS(RND(1001, 1200))
-LCLICK(325,1068)
-WAITMS(RND(1001, 1200))
-WAITMS(RND(1001, 1200))
-KEYDOWN (#CTRL)
-WAITMS (50)
-KEYPRESS (#V)
-KEYUP (#CTRL)
-WAITMS(RND(5001, 5200))     // копирование + вставка картинки
-
-GETSCREEN(490, 120, 935, 1028)
-IF_PIXEL_IN (490, 120, 935, 1028, 15890200)
- LCLICK($_return1, $_return2)
-END_IF
-WAITMS(5000)     // анализ экрана + опубликовать
-
-LCLICK(156,296)  // начало добавления в друзья
-$var = 0
-WHILE($var < 40)
-   INC($var,1)
-   WHEELDOWN
-   WAITMS(RND(350, 600))
-   GETSCREEN(10, 247, 336, 1028)
-   WAITMS(RND(350, 600))
-   IF_PIXEL_IN (10, 247, 336, 1028, 15890200)
-    LCLICK($_return1, $_return2)
-   END_IF 
-END_CYC         // конец добавления в друзья
- 
 LCLICK(278,14) 
 WAITMS(RND(1001, 1200))
 LCLICK(852,642)  
 WAITMS(RND(2001, 2200))
 LCLICK(230,18)  // Закрываем ФБ и переходим в ТВ
-
+WAITMS(RND(2001, 2200))
+SOUND(facebook.wav)
 
 twper:         // начало первой страницы ТВ
 LCLICK(372,1067)  
@@ -909,52 +700,19 @@ KEYPRESS(#ENTER)
 WAITMS(5000)
 LCLICK(232,17)  // переходим в инстаграм
 WAITMS(RND(1001, 1200))
+SOUND(twitter.wav)
 
 igper:
 LCLICK(1412,295)  // нажимаем на "Все"
 WAITMS(RND(1501, 1900))
-$var = 0
-WHILE($var < 15)
-   INC($var,1)
-   WAITMS(RND(2001, 2200))
-   GETSCREEN(1120, 211, 1257, 1005)
-   IF_PIXEL_IN (1120, 211, 1257, 1005, 16160000)
-    LCLICK($_return1, $_return2)
-   WAITMS(RND(1001, 1200))
-   END_IF
-END_CYC         // Подписка
-$var = 0
-WHILE($var < 10)
-   INC($var,1)
-   WHEELDOWN
-   WAITMS(RND(1001, 1200))
-END_CYC        // прокрутка 
-$var = 0
-WHILE($var < 15)
-   INC($var,1)
-   WAITMS(RND(2001, 2200))
-   GETSCREEN(1120, 211, 1257, 1005)
-   IF_PIXEL_IN (1120, 211, 1257, 1005, 16160000)
-    LCLICK($_return1, $_return2)
-   WAITMS(RND(1001, 1200))
-   END_IF
-END_CYC         // Подписка
-$var = 0
-WHILE($var < 10)
-   INC($var,1)
-   WHEELDOWN
-   WAITMS(RND(1001, 1200))
-END_CYC        // прокрутка 
-$var = 0
-WHILE($var < 15)
-   INC($var,1)
-   WAITMS(RND(2001, 2200))
-   GETSCREEN(1120, 211, 1257, 1005)
-   IF_PIXEL_IN (1120, 211, 1257, 1005, 16160000)
-    LCLICK($_return1, $_return2)
-   WAITMS(RND(1001, 1200))
-   END_IF
-END_CYC         // Подписка
+$var2 = 0
+WHILE($var2 < 3)
+   IGScroll()
+   IGSubscribe()
+   INC($var2, 1) 
+END_CYC
+SOUND(instagram.wav)   // звуковой сигнал о конце в instagram
+WAIT(5)
 
-
-WAIT(3600)
+SOUND(end.wav)   // звуковой сигнал о конце работы скрипта
+WAIT(3600)   // задержка для остановки работы
