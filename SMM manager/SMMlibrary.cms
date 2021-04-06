@@ -1,4 +1,5 @@
-﻿
+﻿// Библиотека различных функций по действиям в социальных сетях (добавление постановка
+// лайки, добавление в друзья и прочее) автор Игорь Литвинов, litvinovis102@yandex.ru
 
 SUB(CheckLikesPersonal)    // Функция делает анализ экрана персональной странциы ВК, если находит место для лайка - ставит его   
    WAITMS(RND(1001, 1200))
@@ -544,5 +545,113 @@ SUB(FBFriendsAdd)
          LCLICK($_return1, $_return2)
       END_IF 
    END_CYC         // конец добавления в друзья
+END_SUB
+
+SUB(TWPersonalPost, $post)
+   LCLICK(794,195)  // постановка курсора на поле для твита
+   WAITMS(RND(1001, 1200))
+   LCLICK(372,1067)  // переход в эксель
+   WAITMS(RND(1001, 1200))
+   switch($post)
+   case(1)
+      LCLICK(129,1002)     // выбор 1 листа
+   case(2)
+      LCLICK(195,1002)     // выбор 2 листа
+   case(3)
+      LCLICK(251,1002)     // выбор 3 листа
+   case(4)
+	   LCLICK(315,1002)    // выбор 4 листа
+	case(5)
+	   LCLICK(369,1002)    // выбор 5 листа
+   case(6)
+      LCLICK(428,1002)     // выбор 6 листа
+   case(7)
+      LCLICK(492,1002)     // выбор 7 листа
+   case(8)
+      LCLICK(550,1002)     // выбор 8 листа
+   case(9)
+	   LCLICK(612,1002)    // выбор 9 листа
+	case(10)
+	   LCLICK(662,1002)    // выбор 10 листа
+   default
+      LCLICK(129,1002)     // выбор 1 листа
+   end_switch   
+   WAITMS(RND(1001, 1200))
+   LCLICK(416,269)   // выделение заголовка 
+   WAITMS(RND(1001, 1200))
+   KEYDOWN (#CTRL)
+   WAITMS (50)
+   KEYPRESS (#C)
+   KEYUP (#CTRL)
+   WAITMS(RND(1001, 1200))
+   LCLICK(308,1057)  
+   WAITMS(RND(1001, 1200))
+   LCLICK(836,192)
+   WAITMS(RND(1001, 1200))
+   KEYDOWN (#CTRL)
+   WAITMS (50)
+   KEYPRESS (#V)
+   KEYUP (#CTRL)
+   WAITMS(RND(1001, 1200))      // копирование + вставка загловка
+   LCLICK(367,1056)  // переход в эксель
+   WAITMS(RND(1001, 1200))
+   LCLICK(1670,490)   // выделение картинки
+   WAITMS(RND(1001, 1200))
+   KEYDOWN (#CTRL)
+   WAITMS (50)
+   KEYPRESS (#C)
+   KEYUP (#CTRL)
+   WAITMS(RND(1001, 1200))
+   LCLICK(325,1068)
+   WAITMS(RND(1001, 1200))
+   KEYDOWN (#CTRL)
+   WAITMS (50)
+   KEYPRESS (#V)
+   KEYUP (#CTRL)
+   WAITMS(RND(3001, 3200))     // копирование + вставка картинки
+
+   GETSCREEN(1071, 220, 1190, 1028)
+   WAITMS(RND(1001, 1200))
+   IF_PIXEL_IN (1071, 220, 1190, 1028, 15900957)
+      LCLICK($_return1, $_return2)
+   END_IF
+   WAITMS(RND(20001, 27200))     // анализ экрана + опубликовать
+END_SUB
+
+SUB(TWFriendsAdd)
+   WAITMS(RND(1001, 1200))
+   LCLICK(512,54)  // Переходим в адресную строку браузера
+   WAITMS(RND(1001, 1200))
+   KEYSTRING("https://twitter.com/i/connect_people")
+   WAITMS(RND(1001, 1200))
+   KEYPRESS(#ENTER)
+   WAITMS(RND(5001, 5200))
+   $var = 0
+   WHILE($var < 25)
+      WAITMS(RND(501, 700))
+      GETSCREEN()
+      WAITMS(RND(501, 700))
+      IF_PICTURE_IN (1070, 167, 1196, 1026, "NEWFOLLOW.bmp", -1, 80)
+         LCLICK($_return1, $_return2)
+      END_IF
+      WAITMS(RND(500, 700))
+      GETSCREEN()
+      WAITMS(RND(500, 700))
+      IF_PICTURE_IN (1070, 167, 1196, 1026, "chitat.bmp", -1, 80)
+         LCLICK($_return1, $_return2)
+      END_IF
+      INC($var, 1)
+      WHEELDOWN
+      WAITMS(RND(501, 700))
+      WHEELDOWN
+      WAITMS(RND(501, 700))
+   END_CYC          // цикл подписки на рекомендации
+END_SUB
+
+SUB(TWSwitchAccount)
+   LCLICK(531,991)  
+   WAITMS(RND(1001, 1200))
+   LCLICK(496,735)
+   WAITMS(15000)    // переходим в следующий профиль
 END_SUB
 
