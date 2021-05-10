@@ -1,7 +1,7 @@
-# <p align=center> "SMM manager Autoclicker script </p>
+# <p align=center> Social media manager script </p>
 
 Скрипт для программы [Clickermann](http://crapware.aidf.org/page/clickermann) v4.13. Создан для автоматизации процесса управления социальными сетями.
-Данный скрипт берет 5 новостей подготовленных в файле Excel и публикует их в:
+Данный скрипт берет 10 новостей подготовленных по шаблону в файле Excel и публикует их в:
 - 1 группа Вконтакте;
 - 5 персональных страниц Вконтакте;
 - 1 страница Facebook;
